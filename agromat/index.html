@@ -14,11 +14,25 @@
         <link rel="shortcut icon" href="/favicon.ico">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
+        <style>
+            body:after {
+                display: block;
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #fff;
+                z-index: 1000;
+            }
+        </style>
         <script src="js/core/head_js-modernizr.js"></script>
         <script>
             head.load("css/styles.css");
             head.load('js/core/jquery.js', 'js/core/scrollIt.js', 'js/scripts.js');
         </script>
+        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
     </head>
 
     <body>
@@ -164,7 +178,7 @@
                     <div class="contacts">
                         <div class="contacts-itm">
                             <div class="contacts-itm-wrp">
-                                <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:236px;width:100%;'><div id='gmap_canvas' style='height:236px;width:100%;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:17,center:new google.maps.LatLng(50.4713528718932,30.35545633334345),mapTypeId: google.maps.MapTypeId.ROADMAP,scrollwheel: false};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(50.4713528718932,30.35545633334345)});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+                                <div style='overflow:hidden;height:236px;width:100%;'><div id='gmap_canvas' style='height:236px;width:100%;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:17,center:new google.maps.LatLng(50.4713528718932,30.35545633334345),mapTypeId: google.maps.MapTypeId.ROADMAP,scrollwheel: false};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(50.4713528718932,30.35545633334345)});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
                             </div>
                             <div class="contacts-itm-card">
                                 <h3 class="contacts-itm-title">Керамік Сіті</h3>
