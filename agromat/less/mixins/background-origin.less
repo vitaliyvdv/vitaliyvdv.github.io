@@ -1,0 +1,13 @@
+.background-origin(@process: padding-box) {
+  -webkit-background-origin: @process;
+  -moz-background-origin: @process;
+  background-origin: @process;
+}
+
+/*
+.background-origin(...) {
+  @process: ~`(function(e){return e||"padding-box"})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-background-origin: @process;
+  -moz-background-origin: @process;
+  background-origin: @process;
+}*/

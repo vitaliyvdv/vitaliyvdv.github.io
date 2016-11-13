@@ -1,0 +1,20 @@
+// выравнивание по вертикали по центру если браузер не поддерживает flex
+.valign-middle {
+	vertical-align: middle;
+	font-size: 0;
+	line-height: 0;
+}
+
+.valign-middle > * {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.valign-middle:after {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	overflow: hidden;
+	vertical-align: middle;
+	width: 0;
+}

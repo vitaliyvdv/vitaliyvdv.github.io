@@ -1,0 +1,28 @@
+.appearance(@process: none) {
+  -webkit-appearance: @process;
+  -moz-appearance: @process;
+  appearance: @process;
+}
+
+/*
+.appearance(...) {
+  @process: ~`(function(r){return r||"none"})((function(){var r="@{arguments}";return r=r.replace(/^\[|\]$/g,"")})())`;
+  -webkit-appearance: @process;
+  -moz-appearance: @process;
+  appearance: @process;
+}*/
+
+/*
+ 
+ * С помощью свойства appearance Вы можете превратить тэг HTML документа в указанный элемент пользовательского интерфейса.
+
+Данное свойство может иметь следующие значения:
+
+    button - отобразит элемент как кнопку;
+    field - отобразит элемент как поле ввода;
+    menu - отобразит элемент как выпадающее меню;
+    normal - отобразит элемент как обычный;
+    icon - отобразит элемент как маленькое изображение;
+    window - отобразит элемент как окно просмотра.
+
+ * */

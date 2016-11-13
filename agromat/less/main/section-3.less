@@ -1,0 +1,48 @@
+.section-3 {
+    padding: 50px 50% 20px 0;
+    background-color: #164782;
+    color: #fff;
+    position: relative;
+    min-height: 790px;
+}
+
+.section-3:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: #fff url(../images/tile.png) no-repeat 50% 50%;
+    .background-size (contain);
+}
+
+.section-3-content {
+    text-align: center;
+    margin: 40px auto 40px;
+    padding: 0 20px;
+    max-width: 500px;
+}
+
+.section-3-content p {
+    margin: 0 0 20px;
+}
+
+.section-3 .download {
+    margin: 40px 0 50px;
+}
+
+
+
+@media (max-width: 960px) {
+
+    .section-3 {
+        padding: 50px 0 20px;
+    }
+
+    .section-3:before {
+        display: none;
+    }
+
+}

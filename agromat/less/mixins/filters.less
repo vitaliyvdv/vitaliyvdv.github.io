@@ -1,0 +1,160 @@
+.filter(@process: none) {
+  -webkit-filter: @process;
+  -moz-filter: @process;
+  -ms-filter: @process;
+  filter: @process;
+}
+
+/*
+.filter(...) {
+  @process: ~`(function(e){return e=e||"none",/^[^, ]*,/.test(e)&&(e=e.replace(/(?:,)(?![^(]*\))/g,"")),e})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-filter: @process;
+  -moz-filter: @process;
+  -ms-filter: @process;
+  filter: @process;
+}*/
+
+.grayscale(@process: 0) {
+  -webkit-filter: grayscale(@process);
+  -moz-filter: grayscale(@process);
+  -ms-filter: grayscale(@process);
+  filter: grayscale(@process);
+}
+
+/*
+.grayscale(...) {
+  @process: ~`(function(e){e=e||"0";var r=/\d/gi,t=/(?:\s|^)(\.?\d+\.?\d*)(?![^(]*\)|\w|%|\.)/gi;return r.test(e)&&(e=e.replace(t,function(e){return 0==e&&e||e+"%"})),e})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-filter: grayscale(@process);
+  -moz-filter: grayscale(@process);
+  -ms-filter: grayscale(@process);
+  filter: grayscale(@process);
+}*/
+
+.blur(@process: 0) {
+  -webkit-filter: blur(@process);
+  -moz-filter: blur(@process);
+  -ms-filter: blur(@process);
+  filter: blur(@process);
+}
+
+/*
+.blur(...) {
+  @process: ~`(function(e){e=e||"0";var t=/\d/gi,r=/(?:\s|^)(\.?\d+\.?\d*)(?![^(]*\)|\w|%|\.)/gi;return t.test(e)&&(e=e.replace(r,function(e){return 0==e&&e||e+"px"})),e})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-filter: blur(@process);
+  -moz-filter: blur(@process);
+  -ms-filter: blur(@process);
+  filter: blur(@process);
+}*/
+
+.brightness(@process: 1) {
+  -webkit-filter: brightness(@process);
+  -moz-filter: brightness(@process);
+  -ms-filter: brightness(@process);
+  filter: brightness(@process);
+}
+
+/*
+.brightness(...) {
+  @process: ~`(function(e){return e=e||"1"})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-filter: brightness(@process);
+  -moz-filter: brightness(@process);
+  -ms-filter: brightness(@process);
+  filter: brightness(@process);
+}*/
+
+.contrast(@process: 100%) {
+  -webkit-filter: ~"contrast(@{process})";
+  -moz-filter: ~"contrast(@{process})";
+  -ms-filter: ~"contrast(@{process})";
+  filter: ~"contrast(@{process})";
+}
+
+/*
+.contrast(...) {
+  @process: ~`(function(e){e=e||"100%";var t=/\d/gi,r=/(?:\s|^)(\.?\d+\.?\d*)(?![^(]*\)|\w|%|\.)/gi;return t.test(e)&&(e=e.replace(r,function(e){return 0==e&&e||e+"%"})),e})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-filter: ~"contrast(@{process})";
+  -moz-filter: ~"contrast(@{process})";
+  -ms-filter: ~"contrast(@{process})";
+  filter: ~"contrast(@{process})";
+}*/
+
+.drop-shadow(@process) {
+  -webkit-filter: drop-shadow(@process);
+  -moz-filter: drop-shadow(@process);
+  -ms-filter: drop-shadow(@process);
+  filter: drop-shadow(@process);
+}
+
+/*
+.drop-shadow(...) {
+  @process: ~`(function(e){if(e=e||8121991,8121991==e)return e;var t=/\d/gi,r=/(?:\s|^)(\.?\d+\.?\d*)(?![^(]*\)|\w|%|\.)/gi;return/^[^, ]*,/.test(e)&&(e=e.replace(/(?:,)(?![^(]*\))/g,"")),t.test(e)&&(e=e.replace(r,function(e){return 0==e&&e||e+"px"})),e})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-filter: drop-shadow(@process);
+  -moz-filter: drop-shadow(@process);
+  -ms-filter: drop-shadow(@process);
+  filter: drop-shadow(@process);
+}*/
+
+.hue-rotate(@process: 0) {
+  -webkit-filter: hue-rotate(@process);
+  -moz-filter: hue-rotate(@process);
+  -ms-filter: hue-rotate(@process);
+  filter: hue-rotate(@process);
+}
+
+/*
+.hue-rotate(...) {
+  @process: ~`(function(e){e=e||"0";var r=/\d/gi,t=/(?:\s|^)(\.?\d+\.?\d*)(?![^(]*\)|\w|%|\.)/gi;return r.test(e)&&(e=e.replace(t,function(e){return 0==e&&e||e+"deg"})),e})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-filter: hue-rotate(@process);
+  -moz-filter: hue-rotate(@process);
+  -ms-filter: hue-rotate(@process);
+  filter: hue-rotate(@process);
+}*/
+
+.invert(@process: 100%) {
+  -webkit-filter: invert(@process);
+  -moz-filter: invert(@process);
+  -ms-filter: invert(@process);
+  filter: invert(@process);
+}
+
+/*
+.invert(...) {
+  @process: ~`(function(e){e=e||"100%";var r=/\d/gi,t=/(?:\s|^)(\.?\d+\.?\d*)(?![^(]*\)|\w|%|\.)/gi;return r.test(e)&&(e=e.replace(t,function(e){return 0==e&&e||e+"%"})),e})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-filter: invert(@process);
+  -moz-filter: invert(@process);
+  -ms-filter: invert(@process);
+  filter: invert(@process);
+}*/
+
+.saturate(@process: 100%) {
+  -webkit-filter: ~"saturate(@{process})";
+  -moz-filter: ~"saturate(@{process})";
+  -ms-filter: ~"saturate(@{process})";
+  filter: ~"saturate(@{process})";
+}
+
+/*
+.saturate(...) {
+  @process: ~`(function(e){e=e||"100%";var r=/\d/gi,t=/(?:\s|^)(\.?\d+\.?\d*)(?![^(]*\)|\w|%|\.)/gi;return r.test(e)&&(e=e.replace(t,function(e){return 0==e&&e||e+"%"})),e})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-filter: ~"saturate(@{process})";
+  -moz-filter: ~"saturate(@{process})";
+  -ms-filter: ~"saturate(@{process})";
+  filter: ~"saturate(@{process})";
+}*/
+
+.sepia(@process: 100%) {
+  -webkit-filter: sepia(@process);
+  -moz-filter: sepia(@process);
+  -ms-filter: sepia(@process);
+  filter: sepia(@process);
+}
+
+/*
+.sepia(...) {
+  @process: ~`(function(e){e=e||"100%";var r=/\d/gi,t=/(?:\s|^)(\.?\d+\.?\d*)(?![^(]*\)|\w|%|\.)/gi;return r.test(e)&&(e=e.replace(t,function(e){return 0==e&&e||e+"%"})),e})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-filter: sepia(@process);
+  -moz-filter: sepia(@process);
+  -ms-filter: sepia(@process);
+  filter: sepia(@process);
+}*/
+

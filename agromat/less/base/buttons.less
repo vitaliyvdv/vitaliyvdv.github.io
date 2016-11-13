@@ -1,0 +1,117 @@
+.button {
+    height: 46px;
+    max-width: 290px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    .transition (@transition-property: background-color);
+    .transition (@transition-property: color);
+}
+
+.button.color-1,
+.button.color-1:visited {
+    background-color: #164782;
+    color: #fff;
+    border: 2px solid #164782;
+}
+
+.no-mobile .button.color-1:hover,
+.mobile .button.color-1:active {
+    background-color: transparent;
+    color: #164782;
+}
+
+.button.color-2,
+.button.color-2:visited {
+    background-color: #fff;
+    color: #164782;
+    border: 2px solid #fff;
+}
+
+.no-mobile .button.color-2:hover,
+.mobile .button.color-2:active {
+    background-color: #164782;
+    color: #fff;
+}
+
+.button span {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.download {
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+}
+
+.download-btn,
+.download-btn:visited {
+    display: inline-block;
+    padding: 0 0 0 54px;
+    position: relative;
+    text-align: left;
+    .transition (none);
+}
+
+.download-btn:before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    content: '';
+    margin: -23px 0 0;
+    width: 46px;
+    height: 46px;
+    background-repeat: no-repeat;
+    background-image: url(../images/icons.svg);
+}
+
+.download-btn span {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.download-btn.color-1,
+.download-btn:visited.color-1 {
+    color: #afb3ce;
+}
+
+.no-mobile .download-btn.color-1:hover,
+.mobile .download-btn.color-1:active {
+    color: #fff;
+}
+
+.download-btn.color-1:before {
+    border: 2px dashed #afb3ce;
+    background-position: 50% 3px;
+}
+
+.download-btn.color-1:hover:before {
+    border: 2px dashed #fff;
+    background-position: 50% -72px;
+}
+
+.download-btn.color-2,
+.download-btn:visited.color-2 {
+    color: #164782;
+}
+
+.no-mobile .download-btn.color-2:hover,
+.mobile .download-btn.color-2:active {
+    color: #afb3ce;
+}
+
+.download-btn.color-2:before {
+    border: 2px dashed #164782;
+    background-position: 50% -147px;
+}
+
+.download-btn.color-2:hover:before {
+    background-position: 50% 3px;
+    border-color: #afb3ce;
+}

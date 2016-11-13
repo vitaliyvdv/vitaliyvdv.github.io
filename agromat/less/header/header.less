@@ -1,0 +1,103 @@
+.header {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    z-index: 3;
+}
+
+.header > * {
+    height: 100%;
+}
+
+.header-container {
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+    height: 100%;
+}
+
+.menu-button {
+    display: none;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    position: relative;
+    float: right;
+    top: 50%;
+    margin: -20px 0 0;
+    .transition (@transition-property: background-color;);
+}
+
+.no-mobile .menu-button:hover,
+.mobile .menu-button:active {
+    background-color: #164782;
+}
+
+.menu-button:before {
+    position: absolute;
+    display: block;
+    content: ''; 
+    top: 50%;
+    left: 50%;
+    margin: -12px 0 0 -12px;   
+    border-top: 2px solid #164782;
+    border-bottom: 2px solid #164782;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu-button:after {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    margin: -1px 0 0 -12px;
+    border-top: 2px solid #164782;
+    z-index: 2;
+}
+
+.menu-button:before,
+.menu-button:after {
+    .transition (@transition-property: border-color;);    
+}
+
+.no-mobile .menu-button:hover:after,
+.no-mobile .menu-button:hover:before,
+.mobile .menu-button:active:after,
+.mobile .menu-button:active:before {
+    border-color: #fff;
+}
+
+
+
+
+@media (max-width: 800px) {
+
+    .header {
+        //border-bottom: 1px solid #164782;
+        //padding: 1px 0 0;
+    }
+
+    /*.menu-button {
+        display: block;
+    } */   
+
+}
+
+@media (max-width: 720px) {
+
+    .header {
+        position: relative;
+        height: auto;
+        padding: 16px 0 0;
+    }
+
+}

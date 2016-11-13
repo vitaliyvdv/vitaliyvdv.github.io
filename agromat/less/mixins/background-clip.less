@@ -1,0 +1,13 @@
+.background-clip(@process: border-box) {
+  -webkit-background-clip: @process;
+  -moz-background-clip: @process;
+  background-clip: @process;
+}
+
+/*
+.background-clip(...) {
+  @process: ~`(function(r){return r||"border-box"})((function(){var r="@{arguments}";return r=r.replace(/^\[|\]$/g,"")})())`;
+  -webkit-background-clip: @process;
+  -moz-background-clip: @process;
+  background-clip: @process;
+}*/

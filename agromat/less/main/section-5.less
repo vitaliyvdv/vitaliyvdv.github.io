@@ -1,0 +1,45 @@
+.section-5 {
+    padding: 50px 0 20px 50%;
+    background-color: #fff;
+    position: relative;
+    min-height: 800px;
+}
+
+.section-5:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: #fff url(../images/other.png) no-repeat 50% 50%;
+}
+
+.section-5-content {
+    text-align: center;
+    margin: 40px auto 40px;
+    padding: 0 20px;
+    max-width: 500px;
+    font-weight: 700;
+}
+
+.section-5-content p {
+    margin: 0 0 20px;
+}
+
+.section-5 .download {
+    margin: 50px 0;
+}
+
+@media (max-width: 960px) {
+
+    .section-5 {
+        padding: 50px 0;
+    }
+
+    .section-5:before {
+        display: none;
+    }
+
+}
