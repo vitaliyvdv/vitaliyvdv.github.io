@@ -1,0 +1,100 @@
+// Поворот элемента на заданный угол относительно точки трансформации, задаваемой свойством transform-origin.
+.transform-rotate (@deg: 360deg){
+	-ms-transform: rotate(@deg);
+	-webkit-transform: rotate(@deg);
+	-o-transform: rotate(@deg);
+	-moz-transform: rotate(@deg);
+	transform: rotate(@deg);	
+}
+
+.transform-rotate-x (@deg: 10deg){
+	-ms-transform: rotateX(@deg);	
+	-webkit-transform: rotateX(@deg);
+	-o-transform: rotateX(@deg);
+	-moz-transform: rotateX(@deg);
+	transform: rotateX(@deg);	
+}
+
+.transform-rotate-y (@deg: 10deg){
+	-ms-transform: rotateY(@deg);	
+	-webkit-transform: rotateY(@deg);
+	-o-transform: rotateY(@deg);
+	-moz-transform: rotateY(@deg);
+	transform: rotateY(@deg);	
+}
+
+// Устанавливает координаты точки, относительно которой будет происходить трансформация элемента
+.transform-origin(@origin) {
+	-webkit-transform-origin: @origin;
+	-moz-transform-origin: @origin;
+	-ms-transform-origin: @origin;
+	transform-origin: @origin;
+}
+
+// Сдвигает элемент на заданное значение по горизонтали и вертикали
+.transform-translate (@x: 0px, @y: 0px) {
+	-ms-transform: translate(@x, @y);	
+	-webkit-transform: translate(@x, @y);
+	-o-transform: translate(@x, @y);
+	-moz-transform: translate(@x, @y);
+	transform: translate(@x, @y);	
+}
+
+.transform-translate3d (@x: 0px, @y: 0px, @z: 0px) {
+	-ms-transform: translate3d(@x, @y, @z);	
+	-webkit-transform: translate3d(@x, @y, @z);
+	-o-transform: translate3d(@x, @y, @z);
+	-moz-transform: translate3d(@x, @y, @z);
+	transform: translate3d(@x, @y, @z);		
+}
+
+// Масштаб элемента по горизонтали и вертикали
+.transform-scale (@x: 1, @y: 1) {
+	-ms-transform: scale(@x, @y);	
+	-webkit-transform: scale(@x, @y);
+	-o-transform: scale(@x, @y);
+	-moz-transform: scale(@x, @y);
+	transform: scale(@x, @y);		
+}
+
+//Наклоняет элемент на заданный угол по вертикали.
+.transform-skew-x (@deg: 10deg) {
+	-ms-transform: skewX(@deg);		
+	-webkit-transform: skewX(@deg);	
+	-o-transform: skewX(@deg);	
+	-moz-transform: skewX(@deg);
+	transform: skewX(@deg);		
+}
+
+//Наклоняет элемент на заданный угол по горизонтали
+.transform-skew-y (@deg: 10deg) {
+	-ms-transform: skewY(@deg);		
+	-webkit-transform: skewY(@deg);	
+	-o-transform: skewY(@deg);	
+	-moz-transform: skewY(@deg);
+	transform: skewY(@deg);		
+}
+
+// Определяет расстояние от плоскости экрана до точки сходимости линий и тем самым задаёт, насколько выражен эффект перспективы.
+.perspective(@perspective: 800px) {
+	-webkit-perspective: @perspective;
+	-moz-perspective: @perspective;
+	perspective: @perspective;
+}
+
+// Задаёт координаты точки, куда смотрит наблюдатель. Это свойство работает совместно с perspective и определяет точку сходимости линий при перспективе.
+.perspective-origin(@x: 0, @y:50%) {
+	-webkit-perspective-origin: @x @y;
+	-moz-perspective-origin: @x @y;
+	perspective-origin: @x @y;
+}
+
+// отмена трансформации
+
+.transform-none {
+	-ms-transform: none;
+	-webkit-transform: none;
+	-o-transform: none;
+	-moz-transform: none;
+	transform: none;	
+}

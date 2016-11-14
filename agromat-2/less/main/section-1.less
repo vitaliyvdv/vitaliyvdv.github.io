@@ -1,0 +1,186 @@
+.section-1 {
+    height: 680px;
+    background: #2254A0 url(../images/section-1-bg.png) no-repeat 50% 0;
+    padding: 140px 0 0;
+}
+
+.section-1-block {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.section-1-tab {
+    display: table;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 5px 0;
+    width: 100%;
+}
+
+.section-1-tab > * {
+    display: table-cell;
+}
+
+.section-1-l {
+    background-color: #2254A0;
+    color: #fff;
+    fill: #fff;
+    width: 272px;
+    vertical-align: middle;
+}
+
+.section-1-ico {
+    width: 180px;
+    margin: 0 auto;
+}
+
+.section-1-ico > * {
+    display: block;
+}
+
+.section-1-r {
+    background-color: #fff;
+    padding: 16px 30px 4px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.section-1-title {
+    display: inline-block;
+    position: relative;
+    color: #2254A0;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+    font-weight: 700;
+    padding: 0 0 0 200px;
+}
+
+.section-1-title span {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    background: #fff url(../images/icons-sections.svg) no-repeat 50% 0;
+    width: 190px;
+    height: 28px;
+    text-indent: -1000px;
+    overflow: hidden;
+}
+
+.section-1-descr {
+    padding: 16px 0 0;
+}
+
+.section-1-descr p {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 300;
+    margin: 0 0 14px;
+}
+
+.section-1-readmore {
+    display: block;
+    position: relative;
+    margin: 125px auto 0;
+    border: 2px solid #fff;
+    width: 90px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+    padding: 8px 0 10px;
+    cursor: pointer;
+    .transition (@transition-property: background-color);
+    .transition (@transition-property: color);
+}
+
+.section-1-readmore:hover {
+    background-color: #fff;
+    color: #2254A0;
+}
+
+.section-1-readmore:before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: -84px;
+    left: 50%;
+    width: 40px;
+    height: 62px;
+    margin: 0 0 0 -20px;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB3aWR0aD0iMzIiCiAgIGhlaWdodD0iNjEiCiAgIHZpZXdCb3g9IjAgMCAzMi4wMDAwMDEgNjEuMDAwMDAxIgogICBpZD0ic3ZnMTM0MDUiCiAgIHZlcnNpb249IjEuMSIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMC45MSByMTM3MjUiCiAgIHNvZGlwb2RpOmRvY25hbWU9InJlYWRtb3JlLnN2ZyI+CiAgPGRlZnMKICAgICBpZD0iZGVmczEzNDA3IiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiM2NjY2NjYiCiAgICAgYm9yZGVyb3BhY2l0eT0iMS4wIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwLjAiCiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIKICAgICBpbmtzY2FwZTp6b29tPSIwLjM1IgogICAgIGlua3NjYXBlOmN4PSItNTM1LjA1NzA4IgogICAgIGlua3NjYXBlOmN5PSIzMTguNTQ1NTYiCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9InB4IgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9ImxheWVyMSIKICAgICBzaG93Z3JpZD0iZmFsc2UiCiAgICAgdW5pdHM9InB4IgogICAgIGZpdC1tYXJnaW4tdG9wPSIwIgogICAgIGZpdC1tYXJnaW4tbGVmdD0iMCIKICAgICBmaXQtbWFyZ2luLXJpZ2h0PSIwIgogICAgIGZpdC1tYXJnaW4tYm90dG9tPSIwIgogICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTM2NiIKICAgICBpbmtzY2FwZTp3aW5kb3ctaGVpZ2h0PSI3NDUiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9Ii04IgogICAgIGlua3NjYXBlOndpbmRvdy15PSItOCIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIxIiAvPgogIDxtZXRhZGF0YQogICAgIGlkPSJtZXRhZGF0YTEzNDEwIj4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRsZT48L2RjOnRpdGxlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZwogICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMSIKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMzc1Ljc3MTM2LC03ODkuOTA3NzQpIj4KICAgIDxwYXRoCiAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgaWQ9InBvbHlsaW5lMTI5MCIKICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiNmZmZmZmY7c3Ryb2tlLXdpZHRoOjI7c3Ryb2tlLW1pdGVybGltaXQ6MTAiCiAgICAgICBkPSJtIDM3Ni40Mjk4Niw4MzYuMjE5OTUgMTUuMzQxLDEzLjM1OTMgMTUuMzQyMDIsLTEzLjM1OTMgbSAtMTUuMzQyMDIsMCBtIC0xZS01LDEzLjIzMjA5IDAsLTU5LjU0NDMiIC8+CiAgPC9nPgo8L3N2Zz4K') no-repeat 50% 0;
+    .animation(@animation-name: readmore, @animation-duration: 1s, @animation-timing-function: linear, @animation-delay: 0s, @animation-iteration-count: infinite, @animation-direction: alternate, @animation-fill-mode: none, @animation-play-state: running)
+}
+
+@keyframes readmore {
+    
+    0% {
+        .transform-translate (0, -20px);
+    }
+    100% {
+        .transform-translate (0, 0);
+    }
+
+}
+
+@media (max-width: 840px) {
+
+    .section-1-title {
+        padding: 35px 0 0;
+        text-align: center;
+    }
+
+    .section-1-title span {
+        top: 0;
+        left: 50%;
+        margin: 0 0 0 -95px;
+    }
+
+    .section-1-readmore {
+        margin: 90px auto 0;
+    }
+
+    @keyframes readmore {
+        
+        0% {
+            .transform-translate (0, 0);
+        }
+        100% {
+            .transform-translate (0, 10px);
+        }
+    }
+
+}
+
+@media (max-width: 720px) {
+
+    .section-1-readmore {
+        display: none;
+    }
+
+}
+
+@media (max-width: 640px) {
+
+    .section-1 {
+        padding: 0;
+        height: auto;
+    }
+
+    .section-1-tab,
+    .section-1-tab > * {
+        display: block;
+    }
+
+    .section-1-l {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .section-1-r {
+        padding: 20px 30px;
+    }
+
+}

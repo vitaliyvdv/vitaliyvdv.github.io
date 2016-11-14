@@ -1,0 +1,98 @@
+.section-4 {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.section-4 .section-3-title {
+    display: inline-block;
+}
+
+.section-4 .section-3-title-lbl,
+.section-4 .section-3-title-r {
+    background-color: #fff;
+}
+
+.section-4-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.section-4-block {
+    display: table;
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+}
+
+.section-4-row {
+    display: table-row;
+    height: 50%;
+}
+
+.section-4-row > * {
+    display: table-cell;
+    width: 50%;
+    height: 100%;
+}
+
+.section-4-img {
+    background-color: #f9f9f9;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+}
+
+.section-4-descr {
+    vertical-align: top;
+    text-align: left;
+    padding: 30px;
+}
+
+@media (max-width: 800px) {
+
+    .section-4 {
+        background-color: #fff;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .section-4-block,
+    .section-4-row,
+    .section-4-row > * {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .section-4 {
+        padding: 40px 0;
+    }
+
+    .section-4-img {
+        width: 280px;
+        height: 280px;
+        margin: 0 auto 20px;
+        .background-size(cover);
+    }
+
+    .section-4-row:first-child {
+        padding: 300px 0 0;
+        position: relative;
+    }
+
+    .section-4-row:first-child .section-4-img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin: 0 0 0 -140px;
+    }
+
+    .section-4-descr {
+        padding: 0 20px 20px;
+    }
+
+}
+

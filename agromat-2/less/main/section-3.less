@@ -1,0 +1,156 @@
+.section-3 {
+    background-color: #f9f9f9;
+    padding: 50px 0 0;
+}
+
+.section-3-block {
+    width: 100%;
+    max-width: 1024px;
+    min-height: 385px;
+    margin: 0 auto;
+    padding: 0 0 40px;
+    background: url('../images/section-3-bg.png') no-repeat 100% 100%;    
+}
+
+.section-3-title {
+    margin: 0 0 40px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.section-3-title-l {
+    display: table;
+    table-layout: fixed;
+    border-collapse: collapse;
+    height: 62px;
+    border: 1px solid #2254A0;  
+    float: left;  
+}
+
+.section-3-title-l > * {
+    display: table-cell;
+    vertical-align: middle;   
+}
+
+.section-3-title-ico {
+    width: 62px;
+    fill: #fff;
+    color: #fff; 
+    padding: 0 10px;
+    background-color: #2254A0;
+}
+
+.section-3-title-lbl {
+    font-size: 33px;
+    line-height: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 20px;
+    color: #2254A0; 
+}
+
+.section-3-title-r {
+    float: left;
+    display: table;
+    table-layout: fixed;
+    border-collapse: collapse;
+    height: 62px;
+    border: 1px solid #2254A0;
+    margin: 0 0 0 -1px;
+}
+
+.section-3-title-r > * {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 20px;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #2254A0;
+    text-align: center;
+}
+
+.section-3-descr {
+    text-align: left;
+    max-width: 520px;
+}
+
+.section-3-descr ul,
+.section-4-descr ul,
+.section-5-r {
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.section-3-descr li,
+.section-4-descr li,
+.section-5-r li {
+    padding: 0 0 0 32px;
+    position: relative;
+    margin: 0 0 14px;
+}
+
+.section-3-descr li:before,
+.section-4-descr li:before,
+.section-5-r li:before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 4px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #2254A0;
+}
+
+.section-3-descr li a,
+.section-4-descr li a,
+.section-5-r li a {
+    font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+
+    .section-3-block {
+        max-width: 720px;
+        background: transparent;
+        min-height: auto;    
+    }
+
+    .section-3-descr {
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width: 540px) {
+
+    .section-3 {
+        padding: 40px 0 0;
+    }
+    
+    .section-3-title-l,
+    .section-3-title-r {
+        float: none;
+    }
+
+    .section-3-title-l {
+        margin: 0 auto;
+    }
+
+    .section-3-title-lbl {
+        font-size: 27px;
+        line-height: 30px;
+    }
+
+    .section-3-title-r {
+        margin: 4px auto 0;
+    }
+
+    .section-3-title-r > * {
+        font-size: 21px;
+        line-height: 26px;
+        font-weight: 500;
+    }
+
+}

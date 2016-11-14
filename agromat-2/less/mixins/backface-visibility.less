@@ -1,0 +1,17 @@
+.backface-visibility(@process: visible) {
+  -webkit-backface-visibility: @process;
+  -moz-backface-visibility: @process;
+  -o-backface-visibility: @process;
+  -ms-backface-visibility: @process;
+  backface-visibility: @process;
+}
+
+/*
+.backface-visibility(...) {
+  @process: ~`(function(r){return r||"visible"})((function(){var r="@{arguments}";return r=r.replace(/^\[|\]$/g,"")})())`;
+  -webkit-backface-visibility: @process;
+  -moz-backface-visibility: @process;
+  -o-backface-visibility: @process;
+  -ms-backface-visibility: @process;
+  backface-visibility: @process;
+}*/

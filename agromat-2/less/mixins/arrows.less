@@ -1,0 +1,75 @@
+//css-стрелка равносторонняя (вверх)
+.arrow-up(@width:5px, @color:#333) { /*задается высота стрелки и ее цвет*/
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 @width + 1 @width;
+	border-color: transparent transparent @color;
+	border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) @color;  	
+}
+
+//css-стрелка (вниз)
+.arrow-down(@width:5px, @color:#333) { /*задается высота стрелки и ее цвет*/
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: @width @width + 1 0;
+	border-color: @color transparent transparent;
+	border-color: @color rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);	   	
+}
+
+//css-стрелка равносторонняя (влево)
+.css-arrow-left(@width:5px, @color:#333) {
+	border-width: @width;
+	border-style: solid;
+	border-color: transparent;
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: @color;     	
+}
+
+//css-стрелка равносторонняя (вправо)
+.css-arrow-right(@width:5px, @color:#333) {	
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 50px 0 50px 50px;
+	border-width: @width 0 @width @width + 1;
+	border-color: transparent transparent transparent @color;		     	
+}
+
+//css-стрелка длинная (вверх)
+.css-arrow-up-ext(@width, @color) {
+	border-width: @width*2 @width @width*2 @width;
+	border-style: solid;
+	border-color: transparent;
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: @color;		
+}
+
+//css-стрелка длинная (вниз)
+.css-arrow-down-ext(@width, @color) {
+	border-width: @width*2 @width @width*2 @width;
+	border-style: solid;
+	border-color: transparent;
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: @color;     	
+}
+
+//css-стрелка длинная (влево)
+.css-arrow-left-ext(@width, @color) {
+	border-width: @width @width*2 @width @width*2;
+	border-style: solid; 
+	border-color: transparent;
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: @color;     	
+}
+
+//css-стрелка длинная (вправо)
+.css-arrow-right-ext(@width, @color) {
+	border-color: transparent transparent transparent @color;
+	border-width: @width @width*2 @width @width*2;
+	border-style: solid;
+	border-color: transparent;
+	border-color: rgba(255, 255, 255, 0);
+	border-left-color: @color;        	
+}

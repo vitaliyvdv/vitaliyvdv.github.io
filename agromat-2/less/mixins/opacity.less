@@ -1,0 +1,7 @@
+//полупрозрачность
+.opacity(@opacity:0.35) {
+	@ieOpacity: @opacity * 100;
+	-moz-opacity: @opacity;
+	filter:e("alpha(opacity=@{ieOpacity})");
+	opacity: @opacity;	
+}

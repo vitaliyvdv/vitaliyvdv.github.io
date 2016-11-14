@@ -1,0 +1,85 @@
+.navigation {
+    position: absolute;
+    top: 18px;
+    left: 0;
+    right: 0;
+    height: 110px;
+    visibility: hidden;
+    z-index: 1002;
+}
+
+.header-fixed .navigation {
+    position: fixed;
+    top: 0;
+}
+
+.navigation > * {
+    height: 100%;
+}
+
+.navigation-container {
+    height: 100%;
+    padding: 0 230px 0 300px;
+}
+
+.navigation-close {
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    padding: 9px;
+    color: #fff;
+    fill: #fff;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.navigation-close > * {
+    display: block;
+}
+
+@media (max-width: 1280px) {
+
+    .navigation {
+        top: 0;
+        position: fixed;
+    }
+
+    .navigation-container {
+        padding: 0 215px 0 240px;
+    }
+
+}
+
+@media (max-width: 1170px) {
+
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: -320px;
+        right: auto;
+        bottom: 0;
+        height: 100%;
+        width: 320px;
+        background: #2254A0;;
+        visibility: visible;
+        z-index: 1005;
+        .transition (@transition-property: left);
+    }
+
+    .navigation.active {
+        left: 0;
+    }
+
+    .navigation > * {
+        padding-right: 0;
+    }
+
+    .navigation-container {
+        height: 100%;
+        padding: 0;
+        position: relative;
+    }
+
+}

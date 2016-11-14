@@ -1,0 +1,41 @@
+.header-lang {
+    display: table;
+    border-collapse: collapse;
+    table-layout: fixed;
+    height: 100%;
+}
+
+.header-lang-itm {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 300;
+}
+
+.header-lang-lnk,
+.header-lang-lnk:visited,
+.header-lang-lnk.active:hover {
+    display: block;
+    padding: 4px 10px 6px;
+    .transition (@transition-property: background-color);
+    .transition (@transition-property: color);
+}
+
+.header-lang-lnk:hover {
+    background-color: #2254A0;
+    color: #fff;
+}
+
+.header-lang-lnk.active,
+.header-lang-lnk.active:hover {
+    background-color: transparent;
+    color: inherit;
+}
+
+@media (max-width: 480px) {
+
+    .header-lang-itm {
+        padding: 0 10px;
+    }
+}
