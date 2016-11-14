@@ -9,8 +9,6 @@
         <title>HTML</title>
         <meta name="description" content="">
 
-        <meta name="robots" content="noindex, nofollow">
-
         <meta name="viewport" content="width=device-width; initial-scale=1.0">
 
         <link rel="shortcut icon" href="/favicon.ico">
@@ -34,7 +32,11 @@
             head.load("css/styles.css");
             head.load('js/core/jquery.js', 'js/core/scrollIt.js', 'js/scripts.js');
         </script>
+
+        <!--
         <script src='https://maps.googleapis.com/maps/api/js?language=uk'></script>
+-->
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&language=uk"></script>
     </head>
 
     <body>
@@ -83,8 +85,8 @@
                         <p>Новорічні знижки в «Агромат»</p>
                         <p>З 15 листопада 2016 року по 31 січня 2017 року в магазинах «Агромат» діють новорічні знижки до 50% на плитку, сантехніку, меблі, освітлення, кухні, паркет та килими.</p>
                         <p>Зима – час, коли хочеться особливого затишку і тепла.<br> Облаштуйте свою оселю до свят з нашою новою акцією!</p>
-                        <p>Уже з 15 листопада в магазинах «Агромат» розпочинаються новорічні знижки до 50% на величезний асортимент плитки та сантехніки, а також на освітлення, меблі, кухні, паркет та килими.</p>
-                        <p> Кращі дизайнерські колекції, приємні ціни та найвища якість!<br> Нехай ця зима стане особливою!</p>
+                        <p>Уже з 15 листопада в магазинах «Агромат» розпочинаються новорічні знижки до 50% на величезний асортимент плитки та сантехніки, а також на освітлення, меблі, паркет та килими. </p>
+                        <p>Кращі дизайнерські колекції, приємні ціни та найвища якість! Нехай ця зима стане особливою!</p>
                         <p>Акція діє з 15.11.2016 по 31.01.2017 у всіх магазинах «Агромат».<br> Кількість товару обмежена.</p>
                     </div>
                     <a class="button color-1 valign-middle" href="#">
@@ -162,7 +164,7 @@
                     <h1 class="section-title">Інше</h1>
                     <div class="section-5-content">
                         <p>Є речі, які роблять будинок затишним… Улюблене крісло, красивий килим, зроблений вручну, люстра з рідкісного кришталю чи паркет з цінних сортів дерева. Ми пропонуємо безліч товарів, які стануть справжньою окрасою вашого інтер'єру.</p>
-                        <p>Ексклюзивні світильники Masiero та Creazioni, розкішні меблі ToscoNova, м'які дивани Koinor і Ditre, сучасні кухні, якісний дерев'яний паркет та унікальні італійські килими Sitap ручної роботи – все це зі знижками до 50%! Поспішайте до нас за подарунками для вашого дому!</p>
+                        <p>Ексклюзивні світильники Masiero та Creazioni, розкішні меблі ToscoNova, м'які дивани Koinor і Ditre, якісний дерев'яний паркет та унікальні італійські килими Sitap ручної роботи – все це зі знижками до 50%! Поспішайте до нас за подарунками для вашого дому!</p>
                         <p>Акція діє з 15 листопада 2016 по 31 січня 2017 у всіх магазинах «Агромат».</p>
                     </div>
                     <div class="download">
@@ -180,7 +182,42 @@
                     <div class="contacts">
                         <div class="contacts-itm">
                             <div class="contacts-itm-wrp">
-                                <div style='overflow:hidden;height:236px;width:100%;'><div id='gmap_canvas' style='height:236px;width:100%;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:17,center:new google.maps.LatLng(50.4713528718932,30.35545633334345),mapTypeId: google.maps.MapTypeId.ROADMAP,scrollwheel: false};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(50.4713528718932,30.35545633334345,14601)});}google.maps.event.addDomListener(window, 'load', init_map);</script>
+                                
+                                <style>
+    #map-canvas {
+      height: 100%;
+      margin: 0px;
+      padding: 0px
+    }
+</style>
+
+<script>
+  function initialize() {
+    var mapOptions = {
+      scaleControl: true,
+      center: new google.maps.LatLng(50.4713528718932,30.35545633334345),
+      zoom: 15,
+      scrollwheel: false
+    };
+
+    var map = new google.maps.Map(document.getElementById('map-canvas'),
+        mapOptions);
+
+    var marker = new google.maps.Marker({
+      map: map,
+      position: map.getCenter()
+    });
+    var infowindow = new google.maps.InfoWindow();
+    google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open(map, marker);
+    });
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<div style='overflow:hidden;height:236px;width:100%;'><div id='map-canvas' style='height:236px;width:100%;'></div></div>
+                                
+                                
                             </div>
                             <div class="contacts-itm-card">
                                 <h3 class="contacts-itm-title">Керамік Сіті</h3>
@@ -254,10 +291,10 @@
                                     <a class="social-lnk fb" href="#">Facebook</a>
                                 </li>
                                 <li class="social-itm">
-                                    <a class="social-lnk gplus" href="#">Google+</a>
+                                    <a class="social-lnk vk" href="#">Вконтакте</a>
                                 </li>
                                 <li class="social-itm">
-                                    <a class="social-lnk tw" href="#">Twitter</a>
+                                    <a class="social-lnk mail" href="mailto:">Mail</a>
                                 </li>
                             </ul>
                         </div>
@@ -274,7 +311,7 @@
                     </h1>
                     <ul class="footer-menu">
                         <li class="footer-menu-itm">
-                            <a class="footer-menu-lnk" href="#">Про компанию</a>
+                            <a class="footer-menu-lnk" href="#">Про компанiю</a>
                         </li>
                         <li class="footer-menu-itm">
                             <a class="footer-menu-lnk" href="#">Магазини</a>

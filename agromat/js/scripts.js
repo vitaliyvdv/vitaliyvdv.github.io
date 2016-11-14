@@ -1,11 +1,5 @@
 head.ready(function() {
 
-    // lazy load для изображений
-    /*
-        $('.lazyload').lazyLoadXT({
-            blankImage: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
-        });*/
-
     // no transition
 
     var noTransition = function() {
