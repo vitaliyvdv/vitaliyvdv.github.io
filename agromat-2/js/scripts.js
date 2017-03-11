@@ -1,12 +1,12 @@
 head.ready(function() {
 
     // no transition
-
+/*
     $(function() {
         setTimeout(function() {
             $('body').removeClass('no-transition');
         }, 0);
-    });
+    });*/
 
     // bug fix когда в кеше гугла не отображается svg (начало)
     head.ready(document, function() {
