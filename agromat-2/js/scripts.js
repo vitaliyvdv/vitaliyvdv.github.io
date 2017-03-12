@@ -111,6 +111,7 @@ head.ready(function() {
     // попап почты (конец)
 
     // перемотка вверх (начало)
+
     var scrollToTop = function() {
 
         function scrolltop() {
@@ -192,6 +193,15 @@ head.ready(function() {
     });
 
     // скролл к блоку на странице (конец)
+
+    // кнопки Магазины / Склады (начало)
+
+    $('.store-selector').click(function() {
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+    });
+
+    // кнопки Магазины / Склады (конец)
 
 });
 

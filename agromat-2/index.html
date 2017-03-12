@@ -159,9 +159,11 @@
                             <div class="section-2-r">
                                 <h1 class="section-2-title">
                                     <div class="section-2-ico">
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 190 190">
-                                            <use xlink:href="#logosymbol"></use>
-                                        </svg>
+                                        <div class="section-2-ico-wrp">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 190 190">
+                                                <use xlink:href="#logosymbol"></use>
+                                            </svg>
+                                        </div>
                                     </div>
                                     <div class="section-2-lbl">Тут i зараз</div>
                                 </h1>
@@ -181,9 +183,11 @@
                             <h1 class="section-3-title">
                                 <div class="section-3-title-l">
                                     <div class="section-3-title-ico">
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 190 190">
-                                            <use xlink:href="#logosymbol"></use>
-                                        </svg>
+                                        <div class="section-3-title-ico-wrp">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 190 190">
+                                                <use xlink:href="#logosymbol"></use>
+                                            </svg>
+                                        </div>
                                     </div>
                                     <div class="section-3-title-lbl">Багато:</div>
                                 </div>
@@ -206,9 +210,11 @@
                         <h1 class="section-3-title">
                             <div class="section-3-title-l">
                                 <div class="section-3-title-ico">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 190 190">
-                                        <use xlink:href="#logosymbol"></use>
-                                    </svg>
+                                    <div class="section-3-title-ico-wrp">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 190 190">
+                                            <use xlink:href="#logosymbol"></use>
+                                        </svg>
+                                    </div>
                                 </div>
                                 <div class="section-3-title-lbl">Просто:</div>
                             </div>
@@ -247,9 +253,11 @@
                         <h1 class="section-3-title">
                             <div class="section-3-title-l">
                                 <div class="section-3-title-ico">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 190 190">
-                                        <use xlink:href="#logosymbol"></use>
-                                    </svg>
+                                    <div class="section-3-title-ico-wrp">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 190 190">
+                                            <use xlink:href="#logosymbol"></use>
+                                        </svg>
+                                    </div>
                                 </div>
                                 <div class="section-3-title-lbl">Красиво:</div>
                             </div>
@@ -475,11 +483,55 @@
                                 </li>
                             </ul>
                         </section>
+                        <div class="brands-descr">Тож не шукайте їх по інших магазинах, а купуйте в АГРОМАТІ, у офіційного представника.</div>
                     </div>
                 </div>
 
                 <section class="section-7" id="maplocation" data-scroll-index="3">
-
+                    <div class="wrap">
+                        <h1 class="section-7-title">
+                            <div class="section-7-title-l">
+                                <div class="section-7-title-ico">
+                                    <div class="section-7-title-ico-wrp">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 190 190">
+                                            <use xlink:href="#logosymbol"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="section-7-title-lbl">Tут i зараз</div>
+                            </div>
+                            <div class="section-7-title-r"><span>Адреси магазинів</span></div>
+                        </h1>
+                        <div class="stores">
+                            <div class="stores-header">
+                                <div class="stores-header-l">
+                                    <select name="" id="">
+                                        <option value="">Усі міста</option>
+                                        <option value="">Київ</option>
+                                        <option value="">Харків</option>
+                                        <option value="">Дніпро</option>
+                                        <option value="">Львів</option>
+                                        <option value="">Одеса</option>
+                                    </select>
+                                </div>
+                                <div class="stores-header-r">
+                                    <div class="stores-header-selector">
+                                        <button class="store-selector valign-middle active">
+                                            <span>Магазини</span>
+                                        </button>
+                                        <button class="store-selector valign-middle">
+                                            <span>Склади</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stores-map">
+                                <div class="stores-map-wrp">
+                                    <div style='overflow:hidden;height:100%;width:100%;'><div id='gmap_canvas' style='height:100%;width:100%;'></div><div></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:6,center:new google.maps.LatLng(48.379433,31.165579999999977),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(48.379433,31.165579999999977)});infowindow = new google.maps.InfoWindow({content:'<strong>Название</strong><br>Ukraine<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <div class="section-8">
