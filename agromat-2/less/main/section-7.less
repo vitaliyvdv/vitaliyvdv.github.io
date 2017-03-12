@@ -17,20 +17,20 @@
     table-layout: fixed;
     border-collapse: separate;
     border-spacing: 4px 0;
-    height: 62px; 
-    float: left;  
+    height: 62px;
+    float: left;
 }
 
 .section-7-title-l > * {
     display: table-cell;
     vertical-align: middle;
-    border: 1px solid #2254A0;   
+    border: 1px solid #2254A0;
 }
 
 .section-7-title-ico {
     width: 62px;
     fill: #fff;
-    color: #fff; 
+    color: #fff;
     background-color: #2254A0;
 }
 
@@ -49,7 +49,7 @@
     line-height: normal;
     font-weight: 700;
     padding: 0 20px;
-    color: #fff; 
+    color: #fff;
     background-color: #2254A0;
     white-space: nowrap;
 }
@@ -121,7 +121,7 @@
     color: #2254A0;
     cursor: pointer;
     .transition (@transition-property: background-color);
-    .transition (@transition-property: color);    
+    .transition (@transition-property: color);
 }
 
 .store-selector > * {
@@ -179,12 +179,12 @@
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
 
     .section-7-title {
         margin: 0 0 30px;
     }
-    
+
     .section-7-title-l,
     .section-7-title-r {
         float: none;
@@ -196,8 +196,21 @@
 
     .section-7-title-r {
         margin: 4px auto 0;
+        font-size: 21px;
+        line-height: 26px;
     }
-    
+
+    .section-7-title-lbl {
+        font-size: 24px;
+        line-height: 28px;
+        padding: 0 15px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
     .stores-header,
     .stores-header > * {
         display: block;
@@ -218,7 +231,7 @@
     .stores-header-r {
         margin: -1px 0 0;
     }
-    
+
     .stores-map {
         padding: 0 0 75%;
     }
