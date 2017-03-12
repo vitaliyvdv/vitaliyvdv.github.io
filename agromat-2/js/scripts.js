@@ -1,19 +1,31 @@
 head.ready(function() {
 
     // no transition
-/*
+
     $(function() {
         setTimeout(function() {
             $('body').removeClass('no-transition');
         }, 0);
-    });*/
+    });
+
+    // lazy load для изображений
+
+    function imgLazy() {
+        $('.lazyload').lazyLoadXT({
+            blankImage: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
+        });
+    };
+
+    if ($('.lazyload').length > 0) {
+        imgLazy();
+    };
 
     // bug fix когда в кеше гугла не отображается svg (начало)
-    head.ready(document, function() {
+
         $('svg>use').each(function() {
             $(this).attr('xlink:href', document.location.href.split('#')[0] + $(this).attr('xlink:href'));
         });
-    });
+
     // bug fix когда в кеше гугла не отображается svg (конец)
 
     // выдвижная панель навигации (начало)
@@ -61,15 +73,21 @@ head.ready(function() {
 
         popupTarget = $(this).attr('popup-target');
 
-        $('.' + popupTarget).addClass('active');
+        $('.' + popupTarget).show();
+
+        setTimeout(function() {
+            $('.' + popupTarget).addClass('active');
+        }, 50);
 
         $('.mail-close').on('click', function() {
             popupclose = $(this);
             popupclose.parents('.mail').removeClass('active');
+            setTimeout(function() {
+                popupclose.parents('.mail').hide();
+            }, 400);
         });
-
-
-        if ($('.mail').hasClass('active')) {
+     
+       // if ($('.mail').hasClass('active')) {
             $(document).on('mousedown.mailpopup', function(e) { // событие клика по веб-документу
                 var elementtaget = $('.mail-body'); // тут указываем ID элемента
                 if (!elementtaget.is(e.target) // если клик был не по нашему блоку
@@ -77,7 +95,6 @@ head.ready(function() {
                     elementtaget.has(e.target).length === 0) { // и не по его дочерним элементам
                     $('.mail.active').find('.mail-close').click();
                     $(document).off('.mailpopup');
-
                 };
             });
 
@@ -87,7 +104,7 @@ head.ready(function() {
                 }
             });
 
-        };
+       // };
 
     });
 
