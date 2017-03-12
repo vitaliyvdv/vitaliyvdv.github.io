@@ -22,9 +22,9 @@ head.ready(function() {
 
     // bug fix когда в кеше гугла не отображается svg (начало)
 
-        $('svg>use').each(function() {
-            $(this).attr('xlink:href', document.location.href.split('#')[0] + $(this).attr('xlink:href'));
-        });
+    $('svg>use').each(function() {
+        $(this).attr('xlink:href', document.location.href.split('#')[0] + $(this).attr('xlink:href'));
+    });
 
     // bug fix когда в кеше гугла не отображается svg (конец)
 
@@ -86,25 +86,25 @@ head.ready(function() {
                 popupclose.parents('.mail').hide();
             }, 400);
         });
-     
-       // if ($('.mail').hasClass('active')) {
-            $(document).on('mousedown.mailpopup', function(e) { // событие клика по веб-документу
-                var elementtaget = $('.mail-body'); // тут указываем ID элемента
-                if (!elementtaget.is(e.target) // если клик был не по нашему блоку
-                    &&
-                    elementtaget.has(e.target).length === 0) { // и не по его дочерним элементам
-                    $('.mail.active').find('.mail-close').click();
-                    $(document).off('.mailpopup');
-                };
-            });
 
-            $('body').keyup(function(ee) { // закрытие поиска при нажатии клавиши Esc
-                if (ee.keyCode == 27) {
-                    $('.mail.active').find('.mail-close').click();
-                }
-            });
+        // if ($('.mail').hasClass('active')) {
+        $(document).on('mousedown.mailpopup', function(e) { // событие клика по веб-документу
+            var elementtaget = $('.mail-body'); // тут указываем ID элемента
+            if (!elementtaget.is(e.target) // если клик был не по нашему блоку
+                &&
+                elementtaget.has(e.target).length === 0) { // и не по его дочерним элементам
+                $('.mail.active').find('.mail-close').click();
+                $(document).off('.mailpopup');
+            };
+        });
 
-       // };
+        $('body').keyup(function(ee) { // закрытие поиска при нажатии клавиши Esc
+            if (ee.keyCode == 27) {
+                $('.mail.active').find('.mail-close').click();
+            }
+        });
+
+        // };
 
     });
 
@@ -165,32 +165,29 @@ head.ready(function() {
 
     var scrollToBlock = function() {
 
-        var blheight = 0;
+        $('[data-scroll-nav]').on('click', function(event) {
 
-        if (Modernizr.mq('(min-width: 1281px)')) {
-            var blheight = -110;
-        };
+            var scrlinit = $(this).attr("data-scroll-nav");
+            var scrlHeadHeight = 0;
 
-        if (Modernizr.mq('(max-width: 1171px)')) {
-            var blheight = -60;
-        };
+            if (Modernizr.mq('(min-width: 1281px)')) {
+                var scrlHeadHeight = 110;
+            };
 
-        $.scrollIt({
-            upKey: 38, // key code to navigate to the next section
-            downKey: 40, // key code to navigate to the previous section
-            easing: 'linear', // the easing function for animation
-            scrollTime: 600, // how long (in ms) the animation takes
-            activeClass: 'active', // class given to the active nav element
-            onPageChange: null, // function(pageIndex) that is called when page is changed
-            topOffset: blheight // offste (in px) for fixed top navigation
+            if (Modernizr.mq('(max-width: 1171px)')) {
+                var scrlHeadHeight = 60;
+            };
+
+            var targetscrlblock = $('[data-scroll-index="' + scrlinit + '"]').offset().top - scrlHeadHeight;
+
+            event.preventDefault();
+            $('body,html').animate({ scrollTop: targetscrlblock }, 1200);
+
         });
 
     };
 
     scrollToBlock();
-    $(window).on('resize', function() {
-        scrollToBlock();
-    });
 
     // скролл к блоку на странице (конец)
 
