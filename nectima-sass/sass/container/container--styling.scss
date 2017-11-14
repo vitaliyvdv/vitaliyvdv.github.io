@@ -1,0 +1,22 @@
+.container--styling {
+    margin: 0 0 0 -17px;
+}
+
+.container--styling-itm {
+    float: left;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #a6a6a6;
+    margin: 8px 0 0 17px;
+    cursor: pointer;
+    @include transition (color 0.3s ease, opacity 0.3s ease);
+}
+
+.container--styling-itm.active,
+.container--styling-itm.italic-active {
+    color: #000;
+}
+
+.container--styling-itm.italic-noactive {
+    @include opacity(.25);
+}

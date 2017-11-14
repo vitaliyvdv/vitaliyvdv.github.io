@@ -1,0 +1,12 @@
+/*фикс IE для блока, элементы которого имеют свойство float*/
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	zoom: 1;
+}

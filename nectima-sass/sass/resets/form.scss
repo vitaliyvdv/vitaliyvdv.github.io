@@ -1,0 +1,168 @@
+fieldset, form {
+	border: none;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: normal;
+	vertical-align: middle;
+}
+
+select, textarea, input, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+	display: block;
+	height:auto;
+	width:100%;
+	font-family: inherit;
+	color: inherit;
+	font-size:14px;
+	line-height:20px;
+	padding: 8px 12px;
+	margin: 0;
+	vertical-align: middle;
+	background-color: #fff;
+	border: 2px solid #BEBCBD;
+	text-decoration: none;
+	@include border-radius(6px);
+	@include transition (@transition-property: background-color);
+	@include transition (@transition-property: border-color);
+}
+
+textarea, input[type="text"]:hover, input[type="password"]:hover {
+	/*border-bottom-color: #bdbdbd;*/
+}
+
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus {
+	border-color: @color-1;
+	color: inherit;
+}
+
+input::-webkit-input-placeholder {
+	color: #9e9e9e;
+	text-overflow: ellipsis;
+	line-height: normal;
+	@include opacity(1);
+}
+
+input:-moz-placeholder {
+	color: #9e9e9e;
+	text-overflow: ellipsis;
+	@include opacity(1);
+}
+
+input::-moz-placeholder {
+	color: #9e9e9e;
+	text-overflow: ellipsis;
+	@include opacity(1);
+}
+
+input:-ms-input-placeholder {
+	color: #9e9e9e;
+	text-overflow: ellipsis;
+	@include opacity(1);
+}
+
+input:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+input:focus::-moz-placeholder {
+	color: transparent;
+}
+input:focus:-moz-placeholder {
+	color: transparent;
+}
+input:focus:-ms-input-placeholder {
+	color: transparent;
+}
+
+
+input[type=text]::-ms-clear,
+input[type="search"]::-ms-clear {/*Фикс для инпутов IE > 10, чтоб не выскакивал крестик для очистки инпута*/
+	display: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+input[type="search"] {
+	@include box-sizing(border-box);
+	-webkit-appearance: textfield;
+}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+select {
+	font-size: 15px;
+	line-height: 20px;
+	font-weight: 300;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+select option {
+	padding-right: 10px;
+	font-size: 15px;
+	line-height: 20px;
+	font-weight: 300;
+}
+
+select.multiselect option {
+	border-bottom: 1px solid #ddd;
+	padding: 2px 5px;
+}
+
+select.multiselect option:last-child {
+	border-bottom: 0px;
+}
+
+select.select {
+	border: 1px solid #d8d3dc;
+	margin: 3px 6px 0px 0px;
+	outline: 0px;
+}
+
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+
+legend {
+	padding: 0;
+	border: 0;
+}
+
+/* Радиокнопки, чекбоксы
+ ------------------------------------------------------------------------*/
+.radio, .checkbox {
+	min-height: 20px;
+	padding-left: 20px;
+}
+
+.radio input[type="radio"], .checkbox input[type="checkbox"] {
+	float: left;
+	margin-left: -20px;
+}
+
+/* Кнопки
+ ------------------------------------------------------------------------*/
+button, input {
+	*overflow: visible;
+	line-height: normal;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+	vertical-align: middle;
+}
+
+button[disabled], html input[disabled] {
+	cursor: default;
+}

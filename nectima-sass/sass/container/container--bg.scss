@@ -1,0 +1,43 @@
+.container--bg {
+    margin: 0 -6px;
+}
+
+.container--bg-itm {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    float: left;
+    margin: 8px 6px;
+    @include border-radius(50%);
+    cursor: pointer;
+    padding: 9px;
+}
+
+.container--bg-itm[data-invert="true"] {
+    border: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+.container--bg-itm:before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.container--bg-itm > * {
+    display: block;
+    @include opacity(0);
+    @include transition (opacity 0.3s ease);
+}
+
+.container--bg-itm.active > * {
+    @include opacity(1);
+}
+
+.container--bg-itm:active {
+    @include transform-scale (1.1, 1.1);
+}

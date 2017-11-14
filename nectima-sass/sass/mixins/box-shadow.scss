@@ -1,0 +1,5 @@
+@mixin box-shadow($process...) {
+  -webkit-box-shadow: $process;
+  -moz-box-shadow: $process;
+  box-shadow: $process;
+}

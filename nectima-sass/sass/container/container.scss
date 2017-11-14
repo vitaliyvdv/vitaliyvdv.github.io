@@ -1,0 +1,105 @@
+.container--display-cont[data-display-font="karmina"] {
+    font-family: "karmina", serif;
+}
+
+.container--display-cont[data-display-font="source-sans-pro"] {
+    font-family: "source-sans-pro", sans-serif;
+}
+
+.container--display-cont[data-display-font="voltage"] {
+    font-family: "voltage", sans-serif;
+}
+
+.container--display-cont[data-display-weight="normal"] {
+    font-weight: normal;
+}
+
+.container--display-cont[data-display-weight="bold"] {
+    font-weight: 700;
+}
+
+.container--display-cont[data-display-style="italic"] {
+    font-style: italic;
+}
+
+.container--display-cont[data-display-style="normal"] {
+    font-style: normal;
+}
+
+.wrapper {
+    max-width: 1440px;
+    min-height: 100%;
+    margin: 0 auto;
+    background-color: #fafafa;
+    padding: 16px;
+    @include display-flex;
+    @include align-items(center);
+    @include justify-content(center);
+    @include user-select(none);
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.container > * {
+    padding: 24px;
+}
+
+.container--title {
+    position: relative;
+    font-size: 14px;
+    line-height: 1.29;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.container--tools .container--title {
+    color: #9b9b9b;
+}
+
+.container--display .container--title {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 721px) {
+
+    .container {
+        max-width: 920px;
+        min-height: 360px;
+        @include display-flex;
+        @include flex-direction(row-reverse);
+        @include flex-wrap(wrap);
+    }
+
+    .container--display {
+        float: right;
+        width: 60.3261%;
+        position: relative;
+    }
+
+    .container--tools {
+        float: left;
+        background-color: #fff;
+        width: 39.6739%;
+    }
+
+}
+
+@media (max-width: 720px) {
+
+    .container {
+        max-width: 555px;
+    }
+
+    .container--display {
+        height: 50vw;
+    }
+
+}

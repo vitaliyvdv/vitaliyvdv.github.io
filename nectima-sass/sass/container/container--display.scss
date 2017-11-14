@@ -1,0 +1,59 @@
+.container--display {
+    position: relative;
+}
+
+.container--display-cont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    padding: 24px;
+    text-align: center;
+    @include display-flex;
+    @include align-items(center);
+    @include justify-content(center);
+    z-index: 1;
+    @include transition (background-color 0.3s ease, color 0.3s ease);
+}
+
+.container--display-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 32px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.43;
+    font-weight: 700;
+    color: rgba(0, 0, 0, .4);
+    z-index: 1;
+    overflow: hidden;
+}
+
+@media (max-width: 720px) {
+
+    .container--display-caption {
+        bottom: 24px;
+    }
+
+}
+
+@media (min-width: 481px) {
+
+    .container--display-cont {
+        font-size: 48px;
+        line-height: 1.25;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .container--display-cont {
+        font-size: 40px;
+        line-height: 1.25;
+    }
+
+}

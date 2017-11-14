@@ -1,0 +1,92 @@
+@mixin display-flex {
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-webkit-flexbox;
+    display:-moz-flex;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display:flex;
+}
+
+@mixin display-inline-flex {
+    display: -webkit-inline-flex;
+    display: -ms-inline-flex;
+    display: inline-flex;
+}
+
+@mixin flex($process) {
+    -webkit-box-flex: $process;
+    -moz-box-flex: $process;
+    -webkit-flex: $process;
+    -ms-flex: $process;
+    flex: $process;
+}
+
+@mixin flex-basis($process) {
+    -webkit-flex-basis: $process;
+    flex-basis: $process;
+}
+
+@mixin flex-direction($process) {
+    -webkit-box-direction: $process;
+    -moz-box-direction: $process;
+    -webkit-box-orient: $process;
+    -moz-box-orient: $process;
+    -webkit-flex-direction: $process;
+    -ms-flex-direction: $process;
+    flex-direction: $process;
+}
+
+@mixin flex-grow($process) {
+    -webkit-flex-grow: $process;
+    flex-grow: $process;
+}
+
+@mixin flex-shrink($process) {
+    -webkit-flex-shrink: $process;
+    flex-shrink: $process;
+}
+
+@mixin flex-wrap($process) {
+    -webkit-flex-wrap: $process;
+    -ms-flex-wrap: $process;
+    flex-wrap: $process;
+}
+
+@mixin flex-flow($process) {
+    -webkit-flex-flow: $process;
+	-moz-flex-flow: $process;
+	-ms-flex-flow: $process;
+	flex-flow: $process;
+}
+
+@mixin justify-content($process) {  // выравнивание по горизонтали
+    -ms-content: $process;
+    -moz-content: $process;
+    -webkit-justify-content: $process;
+	-moz-justify-content: $process;
+	-ms-justify-content: $process;
+	justify-content: $process;
+}
+
+@mixin order($process) {
+  -webkit-box-ordinal-group: $process;
+  -moz-box-ordinal-group: $process;
+  -ms-flex-order: $process;
+  -webkit-order: $process;
+  order: $process;
+}
+
+@mixin align-items($process) {
+    -webkit-align-items: $process;
+    -moz-align-items: $process;
+    -ms-align-items: $process;
+    align-items: $process;
+}
+
+@mixin align-content($process) {
+    -webkit-align-content: $process;
+	-moz-align-content: $process;
+	-ms-align-content: $process;
+	align-content: $process;
+}

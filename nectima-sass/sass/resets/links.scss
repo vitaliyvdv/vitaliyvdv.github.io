@@ -1,0 +1,23 @@
+/* Ссылки
+ ------------------------------------------------------------------------*/
+a, a:visited, ul li a, ol li a, ul li a:visited, ol li a:visited {
+	color: #4990E2;
+	text-decoration: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	@include transition (color 0.3s ease);
+}
+
+a:active, a:hover, ul li a:hover, ul li a:active, ol li a:hover, ol li a:active {
+	color: #4990E2;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	text-decoration: none;
+}
+
+a,
+a:active,
+a:hover,
+a:focus {
+  outline: 0;
+}

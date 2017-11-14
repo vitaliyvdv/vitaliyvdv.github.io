@@ -1,0 +1,41 @@
+*, 
+*:before, 
+*:after {
+	@include box-sizing(border-box);
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+
+audio, canvas, video, progress {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+audio:not([controls]) {
+	display: none;
+}
+
+[hidden] {
+	display: none;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p, td, th, dl, dt, dd, button, div, span, table, pre, fieldset, ul, ul ul, ul ol, ol, ol ol, ol ul, li, ol, form, article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	margin: 0px;
+	padding: 0px;
+}
+
+*:focus {
+	outline: none;
+}
+
+@import 'html-body';
+@import 'h1-h6';//заголовки
+@import 'text';// форматирование текста, абзацев
+@import 'links';// стили ссылок
+@import 'lists(ol-li)';// списки
+@import 'img';//адаптивные изображения
+@import 'svg';
+@import 'clearfix';

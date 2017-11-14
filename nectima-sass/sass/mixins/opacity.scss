@@ -1,0 +1,6 @@
+//полупрозрачность
+@mixin opacity($opacity:0.35) {
+	$ieOpacity: $opacity * 100;
+	-moz-opacity: $opacity;
+	opacity: $opacity;	
+}
