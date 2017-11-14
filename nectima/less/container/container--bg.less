@@ -1,0 +1,39 @@
+.container--bg {
+    margin: 0 -6px;
+}
+
+.container--bg-itm {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    float: left;
+    margin: 8px 6px;
+    .border-radius(50%);
+    cursor: pointer;
+}
+
+.container--bg-itm[data-invert="true"] {
+    border: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+.container--bg-itm:before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDEzIDEwIj4KICAgIDxwYXRoIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjRkZGIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTEuMTk3IDQuNzY4bDMuNTM1IDMuNTM1IDcuMDcxLTcuMDciLz4KPC9zdmc+Cg==') no-repeat 50% 50%;
+    z-index: 1;
+    .opacity(0);
+    .transition (@transition-property: opacity; @transition-duration: 0.3s;);
+}
+
+.container--bg-itm.active:before {
+    .opacity(1);
+}
+
+.container--bg-itm:active {
+    .transform-scale (1.1, 1.1);
+}

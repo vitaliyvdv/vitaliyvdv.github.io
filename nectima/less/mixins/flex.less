@@ -1,0 +1,148 @@
+.display-flex { 
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-webkit-flexbox;
+    display:-moz-flex;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display:flex;
+}
+
+.display-inline-flex {
+    display: -webkit-inline-flex;
+    display: -ms-inline-flex;
+    display: inline-flex;
+}
+
+.flex(@process) {
+    -webkit-box-flex: @process;
+    -moz-box-flex: @process;
+    -webkit-flex: @process;
+    -ms-flex: @process;
+    flex: @process;    
+}
+
+.flex-basis(@process) {
+    -webkit-flex-basis: @process;
+    flex-basis: @process;    
+}
+
+.flex-direction(@process) {
+    -webkit-box-direction: @process;
+    -moz-box-direction: @process;
+    -webkit-box-orient: @process;
+    -moz-box-orient: @process;
+    -webkit-flex-direction: @process;
+    -ms-flex-direction: @process;
+    flex-direction: @process;
+}
+
+.flex-grow(@process) {
+    -webkit-flex-grow: @process;
+    flex-grow: @process;
+}
+
+.flex-shrink(@process) {
+    -webkit-flex-shrink: @process;
+    flex-shrink: @process;
+}
+
+.flex-wrap(@process) {
+    -webkit-flex-wrap: @process;
+    -ms-flex-wrap: @process;
+    flex-wrap: @process;
+}
+
+.flex-flow(@process) {
+    -webkit-flex-flow: @process;
+	-moz-flex-flow: @process;
+	-ms-flex-flow: @process;
+	flex-flow: @process;  
+} 
+
+.justify-content(@process) {  // выравнивание по горизонтали
+    -ms-content: @process;
+    -moz-content: @process;
+    -webkit-justify-content: @process;
+	-moz-justify-content: @process;
+	-ms-justify-content: @process;
+	justify-content: @process;
+}
+
+.order(@process) {
+  -webkit-box-ordinal-group: @process;  
+  -moz-box-ordinal-group: @process;     
+  -ms-flex-order: @process;     
+  -webkit-order: @process;  
+  order: @process;   
+}
+
+.align-items(@process) {
+    -webkit-align-items: @process;
+    -moz-align-items: @process;
+    -ms-align-items: @process;
+    align-items: @process;    
+}
+
+.align-content(@process) {
+    -webkit-align-content: @process;
+	-moz-align-content: @process;
+	-ms-align-content: @process;
+	align-content: @process;    
+}
+
+
+
+
+/*
+.flex(...) {
+  @process_olderwebkit: ~`(function(e){return/^\d+/.test(e)?e=e.match(/^\d+/)[0]:""==e&&(e="0"),e})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  @process_moz: ~`(function(e){return/^\d+/.test(e)?e=e.match(/^\d+/)[0]:""==e&&(e="0"),e})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  @process: ~`(function(e){return e=e||"0 1 auto",/^[^, ]*,/.test(e)&&(e=e.replace(/(?:,)(?![^(]*\))/g,"")),e})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-box-flex: @process_olderwebkit;
+  -moz-box-flex: @process_moz;
+  -webkit-flex: @process;
+  -ms-flex: @process;
+  flex: @process;
+}
+
+.flex-basis(...) {
+  @process: ~`(function(e){e=e||"auto";var t=/\d/gi,r=/(?:\s|^)(\.?\d+\.?\d*)(?![^(]*\)|\w|%|\.)/gi;return t.test(e)&&(e=e.replace(r,function(e){return 0==e&&e||e+"px"})),e})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-flex-basis: @process;
+  flex-basis: @process;
+}
+
+.flex-direction(...) {
+  @process_oldestwebkit: ~`(function(e){return e="row"==e||"column"==e?"normal":"row-reverse"==e||"column-reverse"==e?"reverse":8121991})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  @process_oldermoz: ~`(function(e){return e="row"==e||"column"==e?"normal":"row-reverse"==e||"column-reverse"==e?"reverse":8121991})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  @process_olderwebkit: ~`(function(e){return e="row"==e||"row-reverse"==e?"horizontal":"column"==e||"column-reverse"==e?"vertical":8121991})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  @process_moz: ~`(function(e){return e="row"==e||"row-reverse"==e?"horizontal":"column"==e||"column-reverse"==e?"vertical":8121991})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  @process: ~`(function(e){return e=e||"row"})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-box-direction: @process_oldestwebkit;
+  -moz-box-direction: @process_oldermoz;
+  -webkit-box-orient: @process_olderwebkit;
+  -moz-box-orient: @process_moz;
+  -webkit-flex-direction: @process;
+  -ms-flex-direction: @process;
+  flex-direction: @process;
+}
+
+.flex-grow(...) {
+  @process: ~`(function(e){return e=e||"0"})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-flex-grow: @process;
+  flex-grow: @process;
+}
+
+.flex-shrink(...) {
+  @process: ~`(function(e){return e=e||"1"})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-flex-shrink: @process;
+  flex-shrink: @process;
+}
+
+.flex-wrap(...) {
+  @process: ~`(function(e){return e=e||"nowrap"})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-flex-wrap: @process;
+  -ms-flex-wrap: @process;
+  flex-wrap: @process;
+}
+*/

@@ -1,0 +1,23 @@
+.container--styling {
+    margin: 0 0 0 -17px;
+}
+
+.container--styling-itm {
+    float: left;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #a6a6a6;
+    margin: 8px 0 0 17px;
+    cursor: pointer;
+    .transition (@transition-property: color; @transition-duration: 0.3s;);
+    .transition (@transition-property: opacity; @transition-duration: 0.3s;);
+}
+
+.container--styling-itm.active,
+.container--styling-itm.italic-active {
+    color: #000;
+}
+
+.container--styling-itm.italic-noactive {
+    .opacity(.25);
+}

@@ -1,0 +1,69 @@
+.column-count(@process: auto) {
+  -webkit-column-count: @process;
+  -moz-column-count: @process;
+  column-count: @process;
+}
+
+/*
+.column-count(...) {
+  @process: ~`(function(e){return e=e||"auto"})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-column-count: @process;
+  -moz-column-count: @process;
+  column-count: @process;
+}*/
+
+.column-gap(@process: normal) {
+  -webkit-column-gap: @process;
+  -moz-column-gap: @process;
+  column-gap: @process;
+}
+
+/*
+.column-gap(...) {
+  @process: ~`(function(e){e=e||"normal";var t=/\d/gi,r=/(?:\s|^)(\.?\d+\.?\d*)(?![^(]*\)|\w|%|\.)/gi;return t.test(e)&&(e=e.replace(r,function(e){return 0==e&&e||e+"px"})),e})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-column-gap: @process;
+  -moz-column-gap: @process;
+  column-gap: @process;
+}*/
+
+.column-rule(@process: medium none) {
+  -webkit-column-rule: @process;
+  -moz-column-rule: @process;
+  column-rule: @process;
+}
+
+/*
+.column-rule(...) {
+  @process: ~`(function(e){e=e||"medium none black";var t=/\d/gi,r=/(?:\s|^)(\.?\d+\.?\d*)(?![^(]*\)|\w|%|\.)/gi;return/^[^, ]*,/.test(e)&&(e=e.replace(/(?:,)(?![^(]*\))/g,"")),t.test(e)&&(e=e.replace(r,function(e){return 0==e&&e||e+"px"})),e})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-column-rule: @process;
+  -moz-column-rule: @process;
+  column-rule: @process;
+}*/
+
+.column-width(@process: auto) {
+  -webkit-column-width: @process;
+  -moz-column-width: @process;
+  column-width: @process;
+}
+
+/*
+.column-width(...) {
+  @process: ~`(function(e){e=e||"auto";var t=/\d/gi,r=/(?:\s|^)(\.?\d+\.?\d*)(?![^(]*\)|\w|%|\.)/gi;return t.test(e)&&(e=e.replace(r,function(e){return 0==e&&e||e+"px"})),e})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-column-width: @process;
+  -moz-column-width: @process;
+  column-width: @process;
+}*/
+
+.columns(@process: auto auto) {
+  -webkit-columns: @process;
+  -moz-columns: @process;
+  columns: @process;
+}
+
+/*
+.columns(...) {
+  @process: ~`(function(e){e=e||"auto auto";var t=/^\d+$/;return/^[^, ]*,/.test(e)&&(e=e.replace(/(?:,)(?![^(]*\))/g,""),e=e.split(" ")),t.test(e[0])&&(e[0]=e[0]+"px"),e.join(" ")})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-columns: @process;
+  -moz-columns: @process;
+  columns: @process;
+}*/
