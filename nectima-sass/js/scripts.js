@@ -5,22 +5,19 @@ $(function(){
     var display = $('.container--display-cont');
     var displayFont = $('.container--display-font');
     var displayWeight = $('.container--display-weight');
-    var displayStyle = $('.container--display-style');
 
     var fontActive = $('.container--typeface').children('.active').attr('data-font');
     var fontActiveName = $('.container--typeface').children('.active').attr('data-name');
     var styleActiveWeight = $('.container--styling').children('.active').text();
     var styleActiveTitle = $('.container--bg').children('.active').attr('data-title-invert');
-
-    var styleActiveItalic = $('.container--styling').children('.italic-active').attr('data-style');
     var colorActive = $('.container--bg').children('.active').attr('data-color');
+
+    var italicItm = $('.container--styling-itm[data-font-style="italic"]');
 
     display.attr({'data-display-font': fontActive, 'data-display-weight': styleActiveWeight});
     display.css({'backgroundColor': colorActive});
-
     displayFont.text(fontActiveName);
     displayWeight.text(styleActiveWeight);
-    displayStyle.text(styleActiveItalic);
 
     if (styleActiveTitle == 'true') {
         $('.color-var').addClass('light');
@@ -33,11 +30,14 @@ $(function(){
         $(this).addClass('active').siblings().removeClass('active');
 
         if ($(this).attr('data-italic') !== "true") {
-            $('.container--styling-itm[data-style="italic"]').addClass('italic-noactive').removeClass('italic-active');
-            display.attr('data-display-style', 'normal');
-            displayStyle.empty();
+            italicItm.addClass('no-italic');
+
+            if (italicItm.hasClass('active')) {
+                italicItm.removeClass('active');
+                $('.container--styling-itm[data-font-style="normal"]').click();
+            };
         } else {
-            $('.container--styling-itm[data-style="italic"]').removeClass('italic-noactive');
+            italicItm.removeClass('no-italic');
         };
 
         displayFont.text($(this).attr('data-name'));
@@ -45,26 +45,12 @@ $(function(){
 
     $('.container--styling').on('click', '.container--styling-itm', function() {
 
-        var attrWeight = $(this).attr('data-weight');
-        var attrStyle = $(this).attr('data-style');
+        var attrFontType = $(this).attr('data-font-style');
 
-        if (typeof attrWeight !== typeof undefined && attrWeight !== false) {
-            display.attr("data-display-weight", $(this).attr('data-weight'));
+        if (!($(this).hasClass('no-italic'))) {
             $(this).addClass('active').siblings().removeClass('active');
+            display.attr("data-display-weight", attrFontType);
             displayWeight.text($(this).text());
-        };
-
-        if ((typeof attrStyle !== typeof undefined && attrStyle !== false) && !($(this).hasClass('italic-noactive')) ) {
-            if ($(this).hasClass('italic-active')) {
-                display.attr('data-display-style', 'normal');
-                $(this).removeClass('italic-active');
-                displayStyle.empty();
-            } else {
-                display.attr('data-display-style', $(this).attr('data-style'));
-
-                $(this).addClass('italic-active');
-                displayStyle.text($(this).text());
-            };
         };
 
     });

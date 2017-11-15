@@ -18,6 +18,31 @@
     @include transition (background-color 0.3s ease, color 0.3s ease);
 }
 
+.container--display-cont[data-display-font="karmina"] {
+    font-family: "karmina", serif;
+}
+
+.container--display-cont[data-display-font="source-sans-pro"] {
+    font-family: "source-sans-pro", sans-serif;
+}
+
+.container--display-cont[data-display-font="voltage"] {
+    font-family: "voltage", sans-serif;
+}
+
+.container--display-cont[data-display-weight="normal"] {
+    font-weight: normal;
+}
+
+.container--display-cont[data-display-weight="bold"] {
+    font-weight: 700;
+}
+
+.container--display-cont[data-display-weight="italic"] {
+    font-weight: 400;
+    font-style: italic;
+}
+
 .container--display-caption {
     position: absolute;
     left: 0;

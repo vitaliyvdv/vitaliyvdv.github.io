@@ -12,11 +12,11 @@
     @include transition (color 0.3s ease, opacity 0.3s ease);
 }
 
-.container--styling-itm.active,
-.container--styling-itm.italic-active {
+.container--styling-itm.active {
     color: #000;
 }
 
-.container--styling-itm.italic-noactive {
+.no-italic {
     @include opacity(.25);
+    cursor: default;
 }
