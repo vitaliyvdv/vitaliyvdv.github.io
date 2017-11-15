@@ -13,7 +13,7 @@
     padding: 9px;
 }
 
-.container--bg-itm[data-invert="true"] {
+.container--bg-itm[data-text-invert="true"] {
     border: 1px solid rgba(0, 0, 0, .09);
 }
 
@@ -32,6 +32,11 @@
     display: block;
     @include opacity(0);
     @include transition (opacity 0.3s ease);
+    stroke: #fff;
+}
+
+.container--bg-itm[data-text-invert="true"] svg {
+    stroke: #000;
 }
 
 .container--bg-itm.active svg {
