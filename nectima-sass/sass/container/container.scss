@@ -42,7 +42,7 @@
     width: 100%;
     margin: 0 auto;
     background-color: #fff;
-    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, .1);
     overflow: hidden;
 }
 
@@ -54,18 +54,29 @@
     position: relative;
     font-size: 14px;
     line-height: 1.29;
-    font-weight: 700;
     text-transform: uppercase;
     white-space: nowrap;
     z-index: 2;
+}
+
+.container--title {
+    color: red;
 }
 
 .container--tools .container--title {
     color: #9b9b9b;
 }
 
-.container--display .container--title {
-    color: rgba(0, 0, 0, 0.4);
+.color-var {
+    @include transition (color 0.3s ease, color 0.3s ease);
+}
+
+.color-var.dark {
+    color: rgba(0, 0, 0, .4);
+}
+
+.color-var.light {
+    color: rgba(255, 255, 255, .4);
 }
 
 @media (min-width: 721px) {

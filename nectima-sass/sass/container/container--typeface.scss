@@ -21,14 +21,7 @@
 }
 
 .container--typeface-itm:hover {
-    @include opacity(.8) 
-}
-
-.container--typeface-itm:active {
-    @include opacity(1);
-    background-color: #000;
-    border-color: #000;
-    color: #fff; 
+    @include opacity(.8);
 }
 
 .container--typeface-itm.active {

@@ -12,7 +12,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
-    sass = require('gulp-sass');
+    sass = require('gulp-sass'),
     cleancss = require('gulp-clean-css'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
@@ -36,12 +36,12 @@ var path = {
     src: { // Пути откуда брать исходники
         html: 'templates/[^_]*.html',
         jsscripts: ['!js/adv/*', '!js/core/*', '!js/plugins/*', '!js/min/**/*', '!js/min/core.js', '!js/min/plugins.js', 'js/**/[^_]*.js'],
-        style: 'sass/[^_]*.scss',
+        style: 'sass/[^_]*.scss'
     },
     watch: { // Указываем, за изменением каких файлов необходимо наблюдать
         html: 'templates/**/*.html',
         jsscripts: 'js/[^_]*.js',
-        style: 'sass/[^_]*.scss'
+        style: 'sass/**/[^_]*.scss'
     }
 };
 
@@ -82,7 +82,8 @@ gulp.task('js:scripts', function() {
 gulp.task('style:build', function() {
     gulp.src(path.src.style)
         .pipe(sourcemaps.init()) // Инициализируем sourcemap
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass.sync().on('error', sass.logError))
+        //.pipe(sass())
         .pipe(cleancss({ compatibility: 'ie8' }))
         .pipe(sourcemaps.write('../maps/css', { addComment: false })) // Пропишем карты
         .pipe(gulp.dest(path.build.css))
@@ -99,13 +100,21 @@ gulp.task('build', [
 
 // отслеживать изменения в файлах
 
+
+
+
 gulp.task('watch', function() {
 
     watch([path.watch.html], function(event, cb) {
         gulp.start('html:build');
     });
-    watch([path.watch.style], function(event, cb) {
+    /*watch([path.watch.style], function(event, cb) {
         gulp.start('style:build');
+        setTimeout(function(){gulp.start('sass');},500)
+    });*/
+    watch([path.watch.style], function(event, cb) {
+        
+        setTimeout(function(){gulp.start('style:build');},500)
     });
     watch([path.watch.jsscripts], function(event, cb) {
         gulp.start('js:scripts');

@@ -10,6 +10,7 @@ $(function(){
     var fontActive = $('.container--typeface').children('.active').attr('data-font');
     var fontActiveName = $('.container--typeface').children('.active').attr('data-name');
     var styleActiveWeight = $('.container--styling').children('.active').text();
+    var styleActiveTitle = $('.container--bg').children('.active').attr('data-title-invert');
 
     var styleActiveItalic = $('.container--styling').children('.italic-active').attr('data-style');
     var colorActive = $('.container--bg').children('.active').attr('data-color');
@@ -20,6 +21,12 @@ $(function(){
     displayFont.text(fontActiveName);
     displayWeight.text(styleActiveWeight);
     displayStyle.text(styleActiveItalic);
+
+    if (styleActiveTitle == 'true') {
+        $('.color-var').addClass('light');
+    } else {
+        $('.color-var').addClass('dark');
+    };
 
     $('.container--typeface').on('click', '.container--typeface-itm', function() {
         display.attr("data-display-font", $(this).attr('data-font'));
@@ -64,15 +71,22 @@ $(function(){
 
     $('.container--bg').on('click', '.container--bg-itm', function() {
 
-        var colorInvert = $(this).attr('data-invert');
+        var colorTextInvert = $(this).attr('data-text-invert');
+        var colorTitleInvert = $(this).attr('data-title-invert');
 
         display.css('backgroundColor', $(this).attr('data-color'));
         $(this).addClass('active').siblings().removeClass('active');
 
-        if (colorInvert == 'true') {
+        if (colorTextInvert == 'true') {
             display.css('color', '#000');
         } else {
             display.css('color', '#fff');
+        };
+
+        if (colorTitleInvert == 'true') {
+            $('.color-var').removeClass('dark').addClass('light');
+        } else {
+            $('.color-var').removeClass('light').addClass('dark');
         };
 
     });

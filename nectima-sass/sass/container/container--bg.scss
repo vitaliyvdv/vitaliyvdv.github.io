@@ -14,7 +14,7 @@
 }
 
 .container--bg-itm[data-invert="true"] {
-    border: 1px solid rgba(0, 0, 0, 0.09);
+    border: 1px solid rgba(0, 0, 0, .09);
 }
 
 .container--bg-itm:before {
@@ -28,13 +28,13 @@
     z-index: 2;
 }
 
-.container--bg-itm > * {
+.container--bg-itm svg {
     display: block;
     @include opacity(0);
     @include transition (opacity 0.3s ease);
 }
 
-.container--bg-itm.active > * {
+.container--bg-itm.active svg {
     @include opacity(1);
 }
 
