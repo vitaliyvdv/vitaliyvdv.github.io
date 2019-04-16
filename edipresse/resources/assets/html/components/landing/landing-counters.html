@@ -1,0 +1,49 @@
+<%
+
+var counters = [
+  {
+    title: "Унікальних користувачів",
+    value: "4.6",
+    maxvalue: "10"
+  },
+  {
+    title: "Знакових брендів",
+    value: "30",
+    maxvalue: "100"
+  },
+  {
+    title: "Мільйонів аудиторії",
+    value: "27",
+    maxvalue: "100"
+  },
+  {
+    title: "Унікальних користувачів",
+    value: "200",
+    maxvalue: "500"
+  },
+  {
+    title: "Знакових брендів",
+    value: "10",
+    maxvalue: "15"
+  },
+  {
+    title: "Мільйонів аудиторії",
+    value: "50",
+    maxvalue: "70"
+  }
+]
+
+%>
+
+<div class="landing-counters">
+  <div class="landing-counters--list d-flex flex-wrap justify-content-center">
+      <% counters.forEach(function(item, i, counters) { %>
+      <div class="landing-counters--item">
+        <div class="landing-counters--circle" id="counter-<%=i%>" data-value="<%=item.value%>" data-max="<%=item.maxvalue%>" v-circle-counter></div>
+        <div class="landing-counters--title">
+            <%=item.title%>
+        </div>
+      </div>
+      <% }); %>
+  </div>
+</div>

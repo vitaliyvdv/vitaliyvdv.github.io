@@ -1,0 +1,19 @@
+.keypoints {
+    &-blue {
+        background-color: $blue;
+        color: $white;
+        padding: 48px 0 56px;
+
+        @include media-breakpoint-down(sm) {
+            padding: 40px 0 48px;
+        }
+    }
+
+    &-item {
+        margin: 16px 32px;
+    }
+
+    &-actions {
+        margin: 40px 0 0;
+    }
+}

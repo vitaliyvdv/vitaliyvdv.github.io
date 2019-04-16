@@ -1,0 +1,23 @@
+<div
+  class="landing-item landing-statistic w-100"
+  v-landing-scroll
+  data-color="landing-statistic-color"
+>
+  <div class="container d-flex flex-column flex-xl-row justify-content-between">
+    <div class="order-2 order-xl-1">
+      <h2 class="landing-header d-flex align-items-center justify-content-center justify-content-xl-start">
+        <div class="landing-header-wrapper">
+            <span>Edipresse Media Ukraine</span>- медійна компанія # 1
+        </div>
+      </h2>
+      ${require('html_components/landing/landing-counters.html')}
+    </div>
+    <div class="statistic-media position-relative order-1 order-xl-2 align-self-center">
+      <div class="statistic-media--object position-absolute w-100 h-100" v-fish>
+        <img src="~img/fish.png" alt="" />
+      </div>
+      <div class="statistic-media--layer-1 position-absolute h-100"></div>
+      <div class="statistic-media--layer-2 position-absolute h-100"></div>
+    </div>
+  </div>
+</div>

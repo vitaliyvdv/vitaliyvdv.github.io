@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Viva!",
+    "link": "#",
+    "icon": "../images/brands/menu/viva.svg"
+  },
+  {
+    "title": "Единственная",
+    "link": "#",
+    "icon": "../images/brands/menu/edinstvennaya.svg"
+  },
+  {
+    "title": "Beauty",
+    "link": "#",
+    "icon": "../images/brands/menu/beauty.svg"
+  },
+  {
+    "title": "Superdom",
+    "link": "#",
+    "icon": "../images/brands/menu/superdom.svg"
+  },
+  {
+    "title": "Destinations",
+    "link": "#",
+    "icon": "../images/brands/menu/destinations.svg"
+  },
+  {
+    "title": "4mama",
+    "link": "#",
+    "icon": "../images/brands/menu/4mama.svg"
+  },
+  {
+    "title": "Твой малыш",
+    "link": "#",
+    "icon": "../images/brands/menu/tvoymalysh.svg"
+  },
+  {
+    "title": "Baby Box",
+    "link": "#",
+    "icon": "../images/brands/menu/baby-box.svg"
+  },
+  {
+    "title": "Beauty Box",
+    "link": "#",
+    "icon": "../images/brands/menu/beauty-box.svg"
+  },
+  {
+    "title": "Dietika",
+    "link": "#",
+    "icon": "../images/brands/menu/dietika.svg"
+  },
+  {
+    "title": "Любимая дача",
+    "link": "#",
+    "icon": "../images/brands/menu/dacha.svg"
+  },
+  {
+    "title": "Приватный дом",
+    "link": "#",
+    "icon": "../images/brands/menu/privat-dom.svg"
+  },
+  {
+    "title": "Полина",
+    "link": "#",
+    "icon": "../images/brands/menu/polina.svg"
+  },
+  {
+    "title": "Твое здоровье",
+    "link": "#",
+    "icon": "../images/brands/menu/tvoe-zdorovie.svg"
+  },
+  {
+    "title": "Юная леди",
+    "link": "#",
+    "icon": "../images/brands/menu/young-lady.svg"
+  },
+  {
+    "title": "Уютная квартира",
+    "link": "#",
+    "icon": "../images/brands/menu/kvartira.svg"
+  }
+]

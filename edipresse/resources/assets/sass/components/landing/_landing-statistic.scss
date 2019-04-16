@@ -1,0 +1,10 @@
+.landing-statistic {
+    background-color: $blue;
+    color: $white;
+    padding: 86px 0 70px;
+    overflow: hidden;
+
+    @include media-breakpoint-down(lg) {
+        padding: 0 0 70px;
+    }
+}

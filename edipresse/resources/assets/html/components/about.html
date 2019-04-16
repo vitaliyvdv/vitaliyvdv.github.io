@@ -1,0 +1,36 @@
+<% var about = [
+  {
+    title: "Місія Edipresse",
+    img: "../images/390-256.jpg",
+    link: "#"
+  },
+  {
+    title: "Команда",
+    img: "../images/390-256.jpg",
+    link: "#"
+  },
+  {
+    title: "Кар'єра",
+    img: "../images/390-256.jpg",
+    link: "#"
+  }
+] %>
+
+<div class="about">
+  <div class="container">
+    <div class="about-list d-flex flex-wrap justify-content-center">
+      <% about.forEach(function(item, i, about) { %>
+      <div class="about-item">
+        <div class="about-item--card">
+          <a class="about-item--media d-block position-relative" href="<%=item.link%>">
+            <img class="position-absolute w-100" src="<%=item.img%>" alt="<%=item.title%>">
+          </a>
+          <div class="about-item--content d-flex justify-content-center">
+            <div is="button-link" class="btn-dark" title="<%=item.title%>" href="<%=item.link%>" arrow="true"></div>
+          </div>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,83 @@
+<% var navigation = [
+  {
+    title: "Новости",
+  },
+  {
+    title: "О компании",
+    submenu: [
+      { title: "Команда" },
+      { title: "Карьера" },
+      { title: "История" },
+      { title: "Миссия" }
+    ]
+  },
+  {
+    title: "Бренды",
+    submenu: [
+      { title: "Viva!" },
+      { title: "Единственная" },
+      { title: "Beauty" },
+      { title: "Superdom" },
+      { title: "Destinations" },
+      { title: "4mama" },
+      { title: "Твой малыш" }
+    ]
+  },
+  {
+    title: "Услуги",
+    submenu: [
+      { title: "Создание РК" },
+      { title: "Создание нативных спецпроектов" },
+      { title: "Веб разработка" },
+      { title: "Комплексные РК" },
+      { title: "АРТ+Копирайт" },
+      { title: "Фото и видео продакшн" },
+      { title: "Мультимедийные проекты" },
+      { title: "SMM и PR" }
+    ]
+  },
+  {
+    title: "Кейсы"
+  },
+  {
+    title: "Контакты",
+  }
+] %>
+
+<div id="navigation" is="navigation" @hide-navigation="hideTopmenu" :class="topmenuClass">
+  <div class="navigation-menu">
+    <div
+      class="navigation-menu--wrapper d-flex flex-column align-items-center d-lg-block"
+    >
+      <ul
+        class="navigation-menu--list list-unstyled d-flex flex-column flex-lg-row justify-content-lg-between"
+      >
+        <% navigation.forEach(function(item, i, navigation) { %>
+        <li class="navigation-menu--item">
+          <a
+            class="navigation-menu--link d-inline-flex text-uppercase"
+            href="#"
+            v-submenu-toggle
+          >
+            <%=item.title%>
+          </a>
+          <% if(typeof item.submenu !== 'undefined' && item.submenu.length >
+          0) { %>
+          <div class="navigation-submenu">
+            <ul class="navigation-submenu--list list-unstyled">
+              <% item.submenu.forEach(function(item, i, navigation) { %>
+              <li class="navigation-submenu--item">
+                <a class="navigation-submenu--link" href="#"
+                  ><%=item.title%></a
+                >
+              </li>
+              <% }); %>
+            </ul>
+          </div>
+          <% }; %>
+        </li>
+        <% }); %>
+      </ul>
+    </div>
+  </div>
+</div>

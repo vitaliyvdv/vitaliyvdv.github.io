@@ -1,0 +1,40 @@
+<% var keypoints = [
+  {
+    title: "Унікальних користувачів",
+    value: "4.6",
+    maxvalue: "10"
+  },
+  {
+    title: "Знакових брендів",
+    value: "30",
+    maxvalue: "50"
+  },
+  {
+    title: "Мільйонів аудиторії",
+    value: "27",
+    maxvalue: "50"
+  }
+] %>
+
+<section id="keypoints" class="keypoints keypoints-blue">
+  <div class="container">
+    <h2 class="content-related--title text-center"><%= title %></h2>
+    <div class="keypoints-list d-flex flex-wrap justify-content-center">
+      <% keypoints.forEach(function(item, i, keypoints) { %>
+      <div class="keypoints-item">
+        <div
+          is="counter"
+          id="<%= i%>"
+          title="<%=item.title%>"
+          value="<%=item.value%>"
+          maxvalue="<%=item.maxvalue%>"
+          theme="white"
+        ></div>
+      </div>
+      <% }); %>
+    </div>
+    <div class="keypoints-actions d-flex align-items-center justify-content-center">
+      <div is="button-link" class="btn-white" title="Завантажити презентацію" href="#"></div>
+    </div>
+  </div>
+</section>

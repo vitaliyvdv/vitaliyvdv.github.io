@@ -1,0 +1,37 @@
+<%
+
+var hader_menu = [
+  {
+    title: "Про компанію",
+    class: ""
+  },
+  {
+    title: "Brands",
+    class: "",
+    event: "event"
+  },
+  {
+    title: "Послуги",
+    class: ""
+  }
+]
+
+%>
+
+<nav class="menu d-none d-md-block position-absolute w-100 h-100">
+  <ul class="menu-list list-unstyled h-100 d-flex align-items-center justify-content-end">
+    <% hader_menu.forEach(function(item, i, hader_menu) { %>
+    <li class="menu-item">
+        <% if(item.event) { %>
+            <a class="menu-item--link d-flex align-items-center" event>
+                <span class="menu-item--title"><%=item.title%></span>
+            </a>
+        <% } else { %>
+            <a class="menu-item--link d-flex align-items-center" href="#">
+                <span class="menu-item--title"><%=item.title%></span>
+            </a>
+        <% }%> 
+    </li>
+    <% }); %>
+  </ul>
+</nav>

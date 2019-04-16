@@ -1,0 +1,42 @@
+<% var platforms = [
+  {
+    title: "Журнал",
+    img: "../images/540-352.jpg",
+    url: "#"
+  },
+  {
+    title: "Сайт",
+    img: "../images/540-352.jpg",
+    url: "#"
+  },
+  {
+    title: "Соцмережі",
+    img: "../images/540-352.jpg",
+    url: "#"
+  },
+  {
+    title: "Events",
+    img: "../images/540-352.jpg",
+    url: "#"
+  }
+] %>
+
+<section class="content-related">
+  <div class="container">
+    <div class="platforms">
+      <h2 class="content-related--title text-center"><%= title %></h2>
+      <div class="platforms-list d-flex flex-wrap">
+        <% platforms.forEach(function(item, i, platforms) { %>
+          <div class="platforms-item">
+            <a class="platforms-item--link d-block position-relative" href="<%=item.url%>">
+              <img src="<%=item.img%>" alt="<%=item.title%>">
+              <div class="platforms-item--title position-absolute d-flex align-items-center justify-content-center w-100 h-100">
+                <%=item.title%>
+              </div>
+            </a>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </div>
+</section>

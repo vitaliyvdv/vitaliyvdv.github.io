@@ -1,0 +1,39 @@
+.counter {
+    &-circle {
+        margin: 0 auto 10px;
+        position: relative;
+        width: 108px;
+
+        &:before {
+            display: block;
+            content: "";
+            padding: 0 0 100%;
+        }
+
+        .circles-wrp {
+            position: absolute !important;
+            top: 0;
+            left: 0;
+        }
+
+        .circles-text {
+            @extend %title;
+            display: flex !important;
+            font-size: 44px !important;
+            line-height: 1 !important;
+            justify-content: center;
+            align-items: center;
+            padding: 3px 0 0 !important;
+        }
+    }
+
+    &-title {
+        font-size: 15px;
+        line-height: 1.5;
+        font-weight: $font-weight-medium;
+        text-transform: uppercase;
+        text-align: center;
+        max-width: 124px;
+        margin: 0 auto;
+    }
+}

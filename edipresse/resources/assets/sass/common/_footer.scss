@@ -1,0 +1,299 @@
+.footer {
+    background-color: $orange;
+    color: $white;
+    user-select: none;
+
+    @include media-breakpoint-down(lg) {
+        .container {
+            padding-left: 16px;
+            padding-right: 16px;
+            max-width: 100%;
+        }
+    }
+
+    a,
+    a:visited,
+    a:hover,
+    a:active,
+    a:focus {
+        color: currentColor;
+        outline: none;
+        transition: border-color 0.3s ease 0s, opacity 0.3s ease 0s;
+    }
+
+    a:hover,
+    a:active {
+        text-decoration: none;
+    }
+
+    &-menu {
+        border-bottom: 1px solid rgba($white, 0.4);
+        padding: 0 3.333333%;
+        @extend %font-size-0;
+
+        &--list {
+            margin: 0 -2.7%;
+            padding: 16px 0;
+        }
+
+        &--item {
+            padding: 8px 2.7%;
+        }
+
+        &--link {
+            font-size: 15px;
+            line-height: 1.5;
+            font-weight: $font-weight-semibold;
+
+            @at-root {
+                a#{&},
+                a#{&}:visited,
+                a#{&}:focus {
+                    border-top: 2px solid transparent;
+                    border-bottom: 2px solid transparent;
+                    padding: 2px 0;
+                }
+
+                .mobile a#{&}:active,
+                .no-mobile a#{&}:hover {
+                    border-bottom-color: rgba($white, 0.4);
+                }
+            }
+        }
+    }
+
+    &-content {
+        padding: 40px 3.333333%;
+
+        @include media-breakpoint-down(md) {
+            padding: 40px 0;
+        }
+    }
+
+    &-logo {
+        width: 212px;
+        position: relative;
+        margin: 0 0 40px;
+        color: $white;
+        fill: $white;
+
+        @include media-breakpoint-down(md) {
+            width: 120px;
+            margin: 0 auto 32px;
+        }
+
+        &:before {
+            display: block;
+            content: "";
+            padding: 0 0 53.636363%;
+        }
+
+        svg {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: auto !important;
+        }
+    }
+
+    &-social {
+        &--list {
+            margin: 0 -10px;
+
+            @include media-breakpoint-down(md) {
+                margin: 0;
+            }
+        }
+
+        &--item {
+            margin: 4px;
+        }
+
+        &--link {
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            line-height: 1;
+        }
+    }
+
+    &-services {
+        &--header {
+            font-size: 15px;
+            line-height: 1.5;
+            font-weight: $font-weight-semibold;
+            margin: 0 0 18px;
+        }
+
+        &--item:not(:last-child) {
+            margin: 0 0 10px;
+        }
+
+        &--link {
+            font-size: 14px;
+            line-height: 1.5;
+
+            @at-root {
+                a#{&},
+                a#{&}:visited,
+                a#{&}:focus {
+                    border-bottom: 1px solid transparent;
+                }
+
+                .mobile a#{&}:active,
+                .no-mobile a#{&}:hover {
+                    border-color: rgba($white, 0.4);
+                }
+            }
+        }
+    }
+
+    &-contacts {
+        @include media-breakpoint-down(md) {
+            margin: 24px 0 0;
+            padding: 32px 0 0;
+            border-top: 1px solid rgba($white, 0.4);
+            width: 100%;
+        }
+
+        &--item {
+            &:nth-child(2) {
+                margin: 24px 0;
+            }
+        }
+
+        &--icon {
+            fill: currentColor;
+            margin: 0 20px 0 0;
+
+            @include media-breakpoint-down(md) {
+                margin: 0 auto 20px;
+            }
+
+            &-block {
+                position: relative;
+                width: 26px;
+                height: 26px;
+
+                svg {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100% !important;
+                    height: auto !important;
+                }
+            }
+        }
+
+        &--content {
+            font-size: 16px;
+            line-height: 1.5;
+
+            @include media-breakpoint-down(md) {
+                text-align: center;
+            }
+
+            p {
+                font: inherit;
+                margin: 0 0 4px;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+
+            a,
+            a:visited,
+            a:focus {
+                display: inline-block;
+                border-bottom: 1px solid transparent;
+            }
+
+            a:hover,
+            a:active {
+                border-bottom-color: rgba($white, 0.4);
+            }
+        }
+    }
+
+    &-brands {
+        padding: 20px 3.333333%;
+        border-top: 1px solid rgba($white, 0.4);
+        color: $white;
+        fill: $white;
+
+        @include media-breakpoint-down(md) {
+            padding: 16px 0;
+        }
+
+        &--item {
+            margin: 16px 0;
+
+            @include media-breakpoint-down(lg) {
+                margin: 16px;
+            }
+        }
+
+        &--link {
+            @at-root {
+                a#{&},
+                a#{&}:visited {
+                    opacity: 0.8;
+                }
+
+                a#{&}:hover,
+                a#{&}:active {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &--icon {
+            svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            &.beauty {
+                padding: 0 0 28.490028%;
+                width: 112px;
+            }
+
+            &.edinstvennaya {
+                padding: 0 0 35.460992%;
+                width: 90px;
+            }
+
+            &.superdom {
+                padding: 0 0 27.027027%;
+                width: 118px;
+            }
+
+            &.tvoymalysh {
+                padding: 0 0 23.255814%;
+                width: 138px;
+            }
+
+            &.for-mama {
+                padding: 0 0 35.842294%;
+                width: 89px;
+            }
+
+            &.viva {
+                padding: 0 0 38.314176%;
+                width: 84px;
+            }
+
+            &.destinations {
+                padding: 0 0 13.586956%;
+                width: 184px;
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.breadcrumbs {
+    position: relative;
+    z-index: 1;
+
+    &-list {
+        padding: 16px 0;
+
+        .theme-blue & {
+            color: $white;
+        }
+
+        .theme-white & {
+            color: currentColor;
+        }
+    }
+
+    &-item {
+        font-size: 13px;
+        line-height: 1.5;
+        text-transform: uppercase;
+        padding: 8px 0;
+
+        &:not(:last-child):after {
+            display: block;
+            content: "";
+            border-left: 1px solid $gray-600;
+            margin: 0 16px;
+
+            .theme-blue & {
+                border-left-color: rgba($white, 0.4);
+            }
+        }
+    }
+
+    &-link {
+        @at-root {
+            a#{&},
+            a#{&}:visited,
+            a#{&}:focus {
+                color: currentColor;
+                transition: opacity 0.4s ease 0s;
+            }
+
+            .no-mobile a#{&}:hover,
+            .mobile a#{&}:active {
+                color: currentColor;
+                opacity: 0.5;
+            }
+        }
+
+        &.current-link {
+            font-weight: $font-weight-semibold;
+        }
+    }
+}

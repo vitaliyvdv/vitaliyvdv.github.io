@@ -1,0 +1,88 @@
+<%
+
+var cases = [
+  {
+    title: "Viva Найкрасивiшi",
+    description: "Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки.",
+    img: "../images/410x265.png",
+    icon: "../images/170x96.png"
+  },
+  {
+    title: "Кейс-2",
+    description: "Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки.",
+    img: "../images/410x265.png",
+    icon: "../images/170x96.png"
+  },
+  {
+    title: "Кейс-3",
+    description: "Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки.",
+    img: "../images/410x265.png",
+    icon: "../images/170x96.png"
+  },
+  {
+    title: "Кейс-4",
+    description: "Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки.",
+    img: "../images/410x265.png",
+    icon: "../images/170x96.png"
+  },
+  {
+    title: "Кейс-5",
+    description: "Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки.",
+    img: "../images/410x265.png",
+    icon: "../images/170x96.png"
+  },
+  {
+    title: "Кейс-6",
+    description: "Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки.",
+    img: "../images/410x265.png",
+    icon: "../images/170x96.png"
+  }
+]
+
+%>
+
+<div
+    class="landing-item landing-case w-100 position-relative"
+    v-landing-scroll
+    data-color="landing-case-color"
+>
+  <div class="container">
+    <div class="case d-xl-flex">
+      <div class="case-left d-flex flex-column">
+        <h2 class="landing-header d-flex align-items-center justify-content-center justify-content-xl-start flex-grow-0 flex-shrink-0 w-100">
+          <div class="landing-header-wrapper">
+              <span>Edipresse Media Ukraine</span>- наші кейси
+          </div>
+        </h2>
+        <div class="case-block flex-grow-1 flex-shrink-0">
+          <div class="case-block--wrapper h-100 position-relative">
+            <ul class="case-list list-unstyled d-flex flex-wrap">
+              <% cases.forEach(function(item, i, cases) { %>
+              <li class="case-list--item d-flex align-items-center justify-content-center">
+                <a class="case-list--link d-block position-relative w-100" href="#">
+                  <img class="position-absolute w-100" src="<%=item.icon%>" alt="<%=item.title%>">
+                </a>
+              </li>
+              <% }); %>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="case-right d-none d-xl-block">
+        <ul class="case-about list-unstyled">
+          <% cases.forEach(function(item, i, cases) { %>
+          <li class="case-about--item">
+            <a class="case-about--img d-block position-relative overflow-hidden" href="#">
+              <div class="case-about--img-wrapper">
+                <img class="position-absolute w-100" src="<%=item.img%>" alt="<%=item.title%>">
+              </div>
+            </a>
+            <h3 class="case-about--title"><%=item.title%></h3>
+            <div class="case-about--description"><%=item.description%></div>
+          </li>
+          <% }); %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

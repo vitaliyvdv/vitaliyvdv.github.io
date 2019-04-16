@@ -1,0 +1,93 @@
+.vacancies {
+    &-item {
+        background-color: $gray-100;
+
+        @include media-breakpoint-up(xl) {
+            padding: 40px 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin: 0 0 72px;
+        }
+
+        @include media-breakpoint-down(lg) {
+            padding: 32px;
+        }
+
+        @include media-breakpoint-down(md) {
+            margin: 0 0 10%;
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-top: -8px;
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+
+        &--header {
+            @include media-breakpoint-up(xl) {
+                width: 455px;
+            }
+
+            @include media-breakpoint-down(lg) {
+                margin: 0 0 32px;
+            }
+        }
+
+        &--title {
+            font-size: 28px;
+            line-height: 1.5;
+            font-weight: $font-weight-bold;
+            color: $black;
+            margin: 0 0 8px;
+
+            @include media-breakpoint-down(md) {
+                font-size: 24px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 20px;
+            }
+
+            a,
+            a:visited,
+            a:focus {
+                color: currentColor;
+            }
+
+            a:hover,
+            a:active {
+                color: $blue;
+            }
+        }
+
+        &--subtitle {
+            line-height: 1.5;
+            color: $gray-600;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 18px;
+            }
+
+            @include media-breakpoint-down(md) {
+                font-size: 16px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 14px;
+            }
+        }
+
+        &--content {
+            @include media-breakpoint-up(xl) {
+                padding: 0 40px;
+            }
+        }
+
+        * + &--action {
+            padding: 32px 0 0;
+        }
+    }
+}

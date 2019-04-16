@@ -1,0 +1,34 @@
+<%
+
+var footer_menu = [
+  {
+    title: "Новости",
+  },
+  {
+    title: "О компании",
+  },
+  {
+    title: "Бренды",
+  },
+  {
+    title: "Услуги",
+  },
+  {
+    title: "Кейсы",
+  },
+  {
+    title: "Контакты",
+  }
+]
+
+%>
+
+<nav class="footer-menu d-none d-lg-block">
+    <ul class="footer-menu--list list-unstyled my-0 d-flex align-items-center">
+        <% footer_menu.forEach(function(item, i, footer_menu) { %>
+        <li class="footer-menu--item text-uppercase">
+            <a class="footer-menu--link" href="#"><%=item.title%></a>
+        </li>
+        <% }); %>
+    </ul>
+</nav>

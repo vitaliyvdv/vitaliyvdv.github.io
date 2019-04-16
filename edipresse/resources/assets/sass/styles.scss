@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+@import "foundation/variables";
+@import "foundation/fonts";
+
+// Bootstrap Required
+@import "~bootstrap/scss/bootstrap";
+
+// Foundation
+@import "foundation/extend";
+@import "foundation/base";
+@import "foundation/buttons";
+@import "foundation/forms";
+@import "foundation/tables";
+@import "foundation/typography";
+
+// Commmon
+@import "common/header";
+@import "common/navigation";
+@import "common/menu";
+@import "common/footer";
+@import "common/breadcrumbs";
+@import "common/content";
+
+// Components
+@import "components/landing/index";
+@import "components/counter";
+@import "components/preloader";
+@import "components/topbanner";
+@import "components/page-header";
+@import "components/platforms";
+@import "components/keypoints";
+@import "components/vacancies";
+@import "components/about";
+
+// Pages
+@import "pages/landing";

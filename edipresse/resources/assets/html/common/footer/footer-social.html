@@ -1,0 +1,29 @@
+<%
+
+var social = [
+  {
+    title: "Facebook",
+    link: "#",
+    icon: "facebook-f"
+  },
+  {
+    title: "Instagram",
+    link: "#",
+    icon: "instagram"
+  }
+]
+
+%>
+
+<section class="footer-social">
+  <h3 class="footer-social--header">Присоединяйтесь к нам в социальных сетях</h3>
+  <ul class="footer-social--list list-unstyled d-flex align-items-center justify-content-center justify-content-lg-start">
+      <% social.forEach(function(item, i, social) { %>
+      <li class="footer-social--item">
+        <a class="footer-social--link d-flex align-items-center justify-content-center" href="<%=item.link%>" aria-label="<%=item.title%>">
+          <font-awesome-icon :icon="['fab', '<%=item.icon%>']"></font-awesome-icon>
+        </a>
+      </li>
+      <% }); %>
+  </ul>
+</section>

@@ -1,0 +1,41 @@
+<%
+
+var footer_services = [
+  {
+    title: "Создание РК"
+  },
+  {
+    title: "Создание Нативных спецпроектов"
+  },
+  {
+    title: "Веб разработка"
+  },
+  {
+    title: "Комплексные РК"
+  },
+  {
+    title: "АРТ+Копирайт"
+  },
+  {
+    title: "Фото и видео продакшн"
+  },
+  {
+    title: "Мультимедийные проекты"
+  },
+  {
+    title: "SMM и PR"
+  }
+]
+
+%>
+
+<nav class="footer-services d-none d-lg-block">
+  <h3 class="footer-services--header text-uppercase">Услуги</h3>
+  <ul class="footer-services--list list-unstyled mb-0">
+    <% footer_services.forEach(function(item, i, footer_services) { %>
+    <li class="footer-services--item text-uppercase">
+      <a class="footer-services--link d-inline-block" href="#"><%=item.title%></a>
+    </li>
+    <% }); %>
+  </ul>
+</nav>

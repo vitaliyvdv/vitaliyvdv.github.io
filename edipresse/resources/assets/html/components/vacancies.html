@@ -1,0 +1,41 @@
+<% var vacancies = [
+  {
+    title: "WEB-розробник",
+    subtitle: "Lorem ipsum",
+    link: "#",
+    lead: "<p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер.</p>"
+  },
+  {
+    title: "Бухгалтер",
+    subtitle: "Lorem ipsum",
+    link: "#",
+    lead: "<p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер.</p><p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер.</p>"
+  },
+  {
+    title: "Редактор",
+    subtitle: "Lorem ipsum",
+    link: "#",
+    lead: "<p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер.</p>"
+  }
+] %>
+
+<div class="vacancies">
+  <% vacancies.forEach(function(item, i, vacancies) { %>
+  <section class="vacancies-item d-xl-flex">
+    <div class="vacancies-item--header d-flex flex-column align-items-center justify-content-center text-uppercase flex-shrink-0">
+      <h2 class="vacancies-item--title">
+        <a href="<%=item.link%>"><%=item.title%></a>
+      </h2>
+      <div class="vacancies-item--subtitle"><%=item.subtitle%></div>
+    </div>
+    <div class="vacancies-item--content d-flex flex-column align-items-center justify-content-center w-100">
+      <div class="vacancies-item--lead w-100">
+        <%=item.lead%>
+      </div>
+      <div class="vacancies-item--action d-flex align-items-center justify-content-center w-100">
+        <div is="button-link" class="btn-dark" title="Детальніше" href="<%=item.link%>" arrow="true"></div>
+      </div>
+    </div>
+  </section>
+  <% }); %>
+</div>

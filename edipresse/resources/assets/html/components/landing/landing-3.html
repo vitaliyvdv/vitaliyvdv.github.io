@@ -1,0 +1,54 @@
+<%
+
+var mission = [
+  {
+    title: "Родина",
+    description: "Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки."
+  },
+  {
+    title: "Дiджитал",
+    description: "Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки."
+  },
+  {
+    title: "Дiджитал",
+    description: "Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки."
+  },
+  {
+    title: "Заходи",
+    description: "Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки."
+  },
+]
+
+%>
+
+<div
+    class="landing-item landing-mission w-100 position-relative"
+    v-landing-scroll
+    data-color="landing-mission-color"
+>
+  <div class="container position-relative">
+    <h2 class="landing-header d-flex align-items-center justify-content-center justify-content-xl-start">
+      <div class="landing-header-wrapper">
+          <span>Edipresse Media Ukraine</span>- наша філософія
+      </div>
+    </h2>
+    <div class="mission">
+      <div class="mission-list d-md-flex flex-wrap">
+        <% mission.forEach(function(item, i, mission) { %>
+        <section class="mission-item">
+          <a class="mission-item--link d-block h-100 position-relative" href="#">
+            <div class="mission-item--media d-none d-xl-block position-absolute w-100 h-100">
+                <img src="~img/for-markup/mission-test.png" alt="" />
+            </div>
+            <div class="mission-item--content position-relative">
+              <div class="mission-item--step font-title">0<%=i+1%></div>
+              <h3 class="mission-item--title"><%=item.title%></h3>
+              <div class="mission-item--intro"><%=item.description%></div>
+            </div>
+          </a>
+        </section>
+        <% }); %>
+      </div>
+    </div>
+  </div>
+</div>

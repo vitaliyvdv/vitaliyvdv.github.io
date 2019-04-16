@@ -1,0 +1,20 @@
+<header class="header flex-grow-0 flex-shrink-0 w-100" ref="header">
+  <div class="container h-100">
+    <div class="header-wrapper h-100 d-flex align-items-center position-relative">
+        <button 
+          class="header-nemu d-flex align-items-center justify-content-center p-0"
+          @click.stop.prevent="navigationToggle"
+        >
+          <div class="header-nemu--icon"></div>
+        </button>
+        <h1 class="header-logo d-flex align-items-center">
+          <a class="header-logo--link d-block" href="/">
+            <div class="header-logo--icon">
+              ${require('svg/inline/edipresse-logo-e.svg')}
+            </div>
+          </a>
+        </h1>
+        ${require('html_common/header/header-menu.html')}
+    </div>
+  </div>
+</header>

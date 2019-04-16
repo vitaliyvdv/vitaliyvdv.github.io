@@ -1,0 +1,49 @@
+{
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": true,
+  "semi": true,
+  "singleQuote": false,
+  "jsxSingleQuote": false,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "arrowParens": "always",
+  "endOfLine": "auto",
+  "parser": "babel",
+  "overrides": [
+    {
+      "files": "*.js",
+      "options": {
+        "endOfLine": "lf",
+        "tabWidth": 2,
+        "useTabs": false
+      }
+    },
+    {
+      "files": "*.scss",
+      "options": {
+        "endOfLine": "lf",
+        "parser": "scss",
+        "tabWidth": 4,
+        "useTabs": false
+      }
+    },
+    {
+      "files": "*.vue",
+      "options": {
+        "endOfLine": "lf",
+        "parser": "vue",
+        "tabWidth": 2,
+        "useTabs": false
+      }
+    },
+    {
+      "files": "*.html",
+      "options": {
+        "endOfLine": "lf",
+        "parser": "html"
+      }
+    }
+  ]
+}

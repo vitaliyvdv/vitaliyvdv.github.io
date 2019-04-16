@@ -1,0 +1,142 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($white, 0.8);
+    transition: background-color 0.4s ease 0s;
+    z-index: 100;
+
+    @include media-breakpoint-up(md) {
+        height: 86px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        height: 64px;
+    }
+
+    &.transparent {
+        background-color: transparent;
+    }
+
+    &.blue {
+        background-color: rgba($blue, 0.85);
+    }
+
+    &.white {
+        background-color: rgba($white, 0.8);
+    }
+
+    @include media-breakpoint-down(lg) {
+        .container {
+            padding-left: 16px;
+            padding-right: 16px;
+            max-width: 100%;
+        }
+    }
+
+    &-logo {
+        margin: 0;
+        padding: 0;
+
+        &--link {
+            width: 26px;
+            height: 26px;
+            position: relative;
+            transition: color 0.4s ease 0s, fill 0.4s ease 0s;
+
+            @at-root {
+                a#{&},
+                a#{&}:visited,
+                a#{&}:hover,
+                a#{&}:focus,
+                a#{&}:active {
+                    color: $gray-900;
+                    fill: $gray-900;
+
+                    .header.transparent &,
+                    .header.blue & {
+                        color: $white;
+                        fill: $white;
+                    }
+
+                    .header.white & {
+                        color: $gray-900;
+                        fill: $gray-900;
+                    }
+                }
+            }
+
+            svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 100% !important;
+                height: auto !important;
+            }
+        }
+    }
+
+    &-nemu {
+        &,
+        &:visited,
+        &:hover,
+        &:active,
+        &:focus {
+            width: 40px;
+            height: 40px;
+            border: 0;
+            background-color: transparent;
+            margin: 0 24px 0 0;
+            outline: none;
+            position: relative;
+        }
+
+        &:before {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        &--icon {
+            width: 32px;
+            height: 14px;
+            position: relative;
+
+            &:before,
+            &:after {
+                display: block;
+                content: "";
+                position: absolute;
+                left: 0;
+                height: 2px;
+                background-color: $gray-900;
+                transition: background-color 0.4s ease 0s;
+
+                .header.transparent &,
+                .header.blue & {
+                    background-color: $white;
+                }
+
+                .header.white & {
+                    background-color: $gray-900;
+                }
+            }
+
+            &:before {
+                width: 100%;
+                top: 0;
+            }
+
+            &:after {
+                width: 16px;
+                bottom: 0;
+            }
+        }
+    }
+}
